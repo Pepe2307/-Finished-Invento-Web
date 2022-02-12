@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--------------------------------------------HEAD------------------------------------------->
+    <head>
+        <meta charset="UTF-8">
+        <!-- Set up utf 8   -->
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Investigar que significan estas dos lineas -->
+
+        <title>Invento Contacto</title>
+        <!--Set up titulo de pestaña-->
+
+        <link rel="icon" href="../Recursos/inventoIcon.ico">
+        <!--Set up icono de pestaña-->
+
+        <link rel="stylesheet" type="text/css" href="contacto_estilos.css">
+        <!--                   ^Link con CSSS^                     --> 
+
+        <script src="https://kit.fontawesome.com/6a4f16e939.js" crossorigin="anonymous"></script>
+        <!--                   ^Awesome Fonts^                     -->
+
+    </head>
+
+    <!--------------------------------------------BODY------------------------------------------->
+    <body>
+
+
+        <!--**********************    HEADER/CABECERA    ********************-->
+        <section class="header">
+
+            <div class="sub_header">
+
+                <div class="logo">
+                    <img src="../Recursos/inventoIcon.png"
+                    Style= "width: 80px; height: 80px;">
+
+                    
+                    <h1 class="titulo_header">Invento</h1>
+
+
+                    <ul class="menu_header">
+                       <li> <a href="../index.html">Home </a> </li> 
+
+                       <li> <a href="../Servicio/servicio.html">Servicio </a> </li>
+
+                       <li> <a href="../Nuestros Trabajos/nuestros_trabajos.html">Nuestros Trabajos </a> </li> 
+                       
+                       <li> <a href="../Sobre Nosotros/sobre_nosotros.html">Sobre Nosotros </a>
+                            <ul>
+                                <li> <a href="../Sobre Nosotros/sobre_nosotros.html">
+                                    Damian Suner</a></li>
+
+                                <li><a href="../Sobre Nosotros/sobre_nosotros.html">
+                                    Pablo "Pepe" Paez</a></li>
+
+                                <li> <a href="../Sobre Nosotros/sobre_nosotros.html">
+                                    Nicolas Dumont</a></li>
+
+                                <li> <a href="../Sobre Nosotros/sobre_nosotros.html">
+                                    Lola Blazquez</a></li>
+
+                                <li> <a href="../Sobre Nosotros/sobre_nosotros.html">
+                                    Joaquin Dumont</a></li>
+                            </ul> 
+                        </li>
+
+                       <li> <a href="#top_page">Contacto </a> </li>
+
+                       <li> <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i></a></li>
+
+                       <li> <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook-square"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!--**********************    TITULO/S DE PAGINA    ********************-->
+        <section id="top_page" class="titulo">
+
+            <h1> <u> Invento - Contacto </u> </h1>
+            <h4> Damian Suñer </h4>
+            
+        </section>
+
+
+        
+        <!--                    Linea Divisora personalizada                  -->
+        <hr>
+
+
+
+
+
+
+
+
+
+        <!--**********************    FORMULARIO    ********************-->
+        <section class="formulario_container">
+
+            <div class="formulario">
+                <form>
+                    <fieldset>
+                        <legend>Formulario de Contacto</legend>
+
+                        <select name="causa_de_consulta">
+                            <option value="">Motivo de contacto</option>
+                            <option value="Diseño">Consulta por Diseño grafico</option>
+                            <option value="Marketing">Consulta por manejo de Marketing</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+
+                        <br><br>
+
+                        <label for="nombre_apellido">Ingrese su nombre: <br> </label>
+                        <input type="text" name="nombre_apellido" placeholder="Nombre, Apellido">
+                        
+                        <br> <br>
+                        <label for="mail">Ingrese su mail: <br> </label>
+                        <input type="email" name="mail"placeholder="su_nombre@gmail.com">
+                        
+                        <br> <br>
+                        <label for="contraseña">Ingrese su contraseña: <br> </label>
+                        <input type="password" name="contraseña" placeholder="Contraseña">
+                        
+                        <br> <br>
+                        <label for="mensaje">ingrese su mensaje: <br> </label>
+                        <textarea name="" id="area_texto" cols="30" rows="10" name="mensaje"
+                        placeholder="Ingrese un mensaje que quiera transmitirnos"></textarea>
+
+                        <br> <br>
+
+                        <div class="botones">
+                            <label for="boton_enviar">Presione para enviar su mensaje</label>
+                            <input type="submit" name="boton_enviar">
+
+                            <br> <br>
+
+                            <label for="boton_borrar">Presione para borrar los valores</label>
+                            <input type="reset"name="boton_borrar">
+                            
+                            <br> <br>
+                            
+                            <label for="boton_normal">Boton normal</label>
+                            <input type="button" name="boton_normal">
+                        </div>
+
+
+                        <h3>
+                            Nos pondremos en contacto a la brevedad.
+                            <i class="fas fa-phone"></i>
+                            <br>
+                            <br>
+                            Recuerde que puede ponerse en contacto por whatsapp para una respuesta
+                            mas rapida.
+                            <i class="fab fa-whatsapp"></i>
+                        </h3>
+
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <!--**********************    BOTONES FIXED A INICIO/WHATSAPP    ********************-->
+
+            <!--Boton a inicio-->
+            <div class="Top_Button">
+                
+                <a href="#top_page" class="boton_top">
+                    <i class="fas fa-angle-up"></i> <!-- Awesome  Fonts Arrow-->
+                </a>
+
+            </div>
+
+
+            <!--Boton WhatsApp-->
+            <div class="whatsapp">
+
+                <a href="https://api.whatsapp.com/send?phone=+54%209%2011%205220-9841"
+                class="boton_whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> <!-- Awesome  Fonts WhatsApp-->
+                </a>
+
+            </div>
+
+
+
+
+        
+        <!--**********************    FOOTER    ********************-->
+        <section class="footer">
+
+            <div class="footer_contacto">     
+                <h1>
+                    Formas de Contacto
+                    <i class="fas fa-chart-line"></i>
+                </h1>
+
+                <p>
+                    Direccion: calle falsa 123<br>
+                    Datos de contacto: horarios de atencion<br> 
+                    Numero de telefono: 123456789<br>
+                    Redes Sociales: @Red Social 1 / @Red Social 2<br>
+                    Links a redes a continuacion:
+                </p>
+            </div>
+
+
+            <div class="iconos_redes">
+                <ul>
+                    <li> <a href="https://www.whatsapp.com/" target="_blank">
+                    <i class="fab fa-whatsapp"></i>         </a>  </li>
+                    
+
+                    <li> <a href="https://www.facebook.com/" target="_blank"> 
+                    <i class="fab fa-instagram"></i>        </a>  </li>
+                    
+
+                    <li> <a href="https://www.instagram.com/" target="_blank"> 
+                    <i class="fab fa-facebook-square"></i>  </a>  </li>
+                </ul>
+            </div>
+            
+
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.
+                418332672874!2d-58.71404978477194!3d-34.54296208047529!2m3!1f0!2f0!3f0!3
+                m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd0d7e07c78b%3A0xf879e262f796e21a
+                !2sPlaza%20de%20San%20Miguel!5e0!3m2!1ses!2sar!4v1642229280904!5m2!1ses!2sar" 
+                
+                width="600" height="397" style="border:0;" 
+                allowfullscreen="" loading="lazy"></iframe>
+                
+            </div>
+
+            
+        </section>
+
+
+    </body>
+
+</html>
