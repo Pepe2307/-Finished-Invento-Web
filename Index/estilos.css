@@ -49,6 +49,9 @@ body::-webkit-scrollbar-thumb{
     margin: 0 auto;
     background-color: rgb(34, 59, 151);
     border-radius: 35px;
+
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 .titulo_header{
@@ -64,6 +67,10 @@ body::-webkit-scrollbar-thumb{
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
+
+
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
 }
 .menu_header{
     float:right;
