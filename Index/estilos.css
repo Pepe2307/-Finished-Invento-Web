@@ -50,14 +50,14 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(34, 59, 151);
     border-radius: 35px;
 
-    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation: fadeInUp;
+    animation-duration: 2s; 
 }
 
 .titulo_header{
     position: absolute;
     display: inline-block;
-    margin: auto;
+    
     margin-left: 25%;
     
     
@@ -69,11 +69,12 @@ body::-webkit-scrollbar-thumb{
     background-attachment: fixed;
 
 
-    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation: fadeIn; 
+    animation-duration: 2s; 
 }
 .menu_header{
     float:right;
+    margin-top: 16px; /* SOLUCION TEMPORAL POR CONFILTO CON BS QUE NO LO QUIERE CENTRAR*/
     padding: 0;
     height:100%;
     display: table;
@@ -147,7 +148,7 @@ body::-webkit-scrollbar-thumb{
     
 
     font-family: 'Lobster', cursive; /* Fuente Importada */
-    font-size: 50px;
+    font-size: 75px;
     mask-border-width: 20px;
     border-radius: 20px;
     border-color: black;
@@ -155,23 +156,27 @@ body::-webkit-scrollbar-thumb{
 .titulo h1{
     padding-top: 90px;
     margin: auto;
+    font-size: 75px;
+}
+.titulo h4{
+    margin: 65px;
+    font-size: 50px;
 }
 
-
 /**************************************    LINEAS HORIZONTALES    *********************/
-hr{  /* Horizontal Line */
+.linea_custom{  /* Horizontal Line */
 
-    width: 62%;
-    height: 10px;
+    width: 62% !important;
+    height: 10px!important;
 
-    background: transparent;
-    -webkit-background-composite: text;
-    -webkit-text-fill-color: transparent;
-    background-image: url(../Recursos/FondoTitulo.jpg);
-    background-attachment: fixed;
+    background: transparent!important;
+    -webkit-background-composite: text!important;
+    -webkit-text-fill-color: transparent!important;
+    background-image: url(../Recursos/FondoTitulo.jpg)!important;
+    background-attachment: fixed!important;
 
-    border-radius: 20px;
-    border-color: black;
+    border-radius: 20px!important;
+    border-color: black!important;
 }
 
 
@@ -695,6 +700,14 @@ ul.imagenes_slider li:target{
 }
 
 
+
+
+/*Carrousel BT5 DE OTRA FORMA DA PROBLEMAS CON EL TAMAÑO*/
+  .carousel {
+    width:640px;
+    height:700px;
+  }
+  
 /**************************************    RESPONSIVE MOBILE   *********************/
 @media screen and (max-width: 700px){
 
@@ -721,6 +734,12 @@ ul.imagenes_slider li:target{
     }
     .presentacion figure .capa{
         display: none;
+    }
+
+    /*Carrousel BT5 DE OTRA FORMA DA PROBLEMAS CON EL TAMAÑO - VER. RESPONSIVE*/
+    .carousel {
+        width: 100%;
+        height:500px;
     }
 
     .Skills{

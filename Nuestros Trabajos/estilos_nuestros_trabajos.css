@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb{
     padding: 0;
     height:100%;
     display: table;
-    
+    margin-top: 16px; /* SOLUCION TEMPORAL POR CONFILTO CON BS QUE NO LO QUIERE CENTRAR*/
     font-size: 20px;
 }
 .menu_header li{
@@ -150,23 +150,27 @@ body::-webkit-scrollbar-thumb{
 .titulo h1{
     padding-top: 90px;
     margin: auto;
+    font-size: 75px;
+}
+.titulo h4{
+    margin: 65px;
+    font-size: 50px;
 }
 
+/**************************************    LINEAS HORIZONTALES    *********************/
+.linea_custom{  /* Horizontal Line */
 
-/**************************************    LINEA HORIZONTAL    *********************/
-hr{  /* Horizontal Line */
+    width: 62% !important;
+    height: 10px!important;
 
-    width: 62%;
-    height: 10px;
+    background: transparent!important;
+    -webkit-background-composite: text!important;
+    -webkit-text-fill-color: transparent!important;
+    background-image: url(../Recursos/FondoTitulo.jpg)!important;
+    background-attachment: fixed!important;
 
-    background: transparent;
-    -webkit-background-composite: text;
-    -webkit-text-fill-color: transparent;
-    background-image: url(../Recursos/FondoTitulo.jpg);
-    background-attachment: fixed;
-
-    border-radius: 20px;
-    border-color: black;
+    border-radius: 20px!important;
+    border-color: black!important;
 }
 
 
@@ -299,6 +303,45 @@ hr{  /* Horizontal Line */
 }
 */
 
+
+
+/**************************************    GALERIA    *********************/
+.titulo_acordeon{
+    font-family: 'Lobster', cursive; /* Fuente Importada */
+    font-size: 50px;
+    color:white;
+
+    margin-top: 1%;
+}
+
+.accordion{
+    border-radius: 50px;
+    border:rgb(34, 59, 151) 20px solid;
+    width: 70%;
+}
+.accordion .accordion-item .accordion-header{
+    background-color: red;
+}
+#collapseOne, #collapseTwo ,#collapseThree{
+    
+    background-color:rgba( 23, 42, 110);
+    color: white;
+}
+#boton_1, #boton_2, #boton_3{
+    background-image: url("/Recursos/fondo.jpg");
+    color: white;
+    font-size: 40px;
+}
+
+
+
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("/Recursos/inventoIcon.png");
+  }
+  .accordion-button::after {
+    background-image: url("/Recursos/inventoIcon.png");
+  }
 /**************************************    Boton de inicio    *********************/
 .boton_top{
     position: fixed;
@@ -464,6 +507,10 @@ hr{  /* Horizontal Line */
     .galeria_imagenes img{
         width: 100px;
         height: 100px;
+    }
+
+    .accordion{
+        width: 100%;
     }
 
     .footer{

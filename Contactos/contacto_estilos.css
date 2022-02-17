@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb{
     padding: 0;
     height:100%;
     display: table;
-    
+    margin-top: 16px; /* SOLUCION TEMPORAL POR CONFILTO CON BS QUE NO LO QUIERE CENTRAR*/
     font-size: 20px;
 }
 .menu_header li{
@@ -151,19 +151,20 @@ body::-webkit-scrollbar-thumb{
 
 
 
-/**************************************    LINEA HORIZONTAL    *********************/
-hr{  /* Horizontal Line */
-    width: 62%;
-    height: 10px;
+/**************************************    LINEAS HORIZONTALES    *********************/
+.linea_custom{  /* Horizontal Line */
 
-    background: transparent;
-    -webkit-background-composite: text;
-    -webkit-text-fill-color: transparent;
-    background-image: url(../Recursos/FondoTitulo.jpg);
-    background-attachment: fixed;
+    width: 62% !important;
+    height: 10px!important;
 
-    border-radius: 20px;
-    border-color: black;
+    background: transparent!important;
+    -webkit-background-composite: text!important;
+    -webkit-text-fill-color: transparent!important;
+    background-image: url(../Recursos/FondoTitulo.jpg)!important;
+    background-attachment: fixed!important;
+
+    border-radius: 20px!important;
+    border-color: black!important;
 }
 
 
@@ -200,6 +201,15 @@ hr{  /* Horizontal Line */
 
     left: 300px;
     bottom: 320px;
+}
+
+/* FORMULARIO BT*/
+.formulario_bt{
+    color: white;
+    font-size: 20px;
+    background-color: rgb(39, 95, 184);
+    padding: 3%;
+    border-radius: 10%;
 }
 
 

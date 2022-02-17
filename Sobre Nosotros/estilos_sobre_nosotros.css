@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    HEADER/CABECERA    *********************/
-.header{
+.header{ /*CAMBIADO*/
     position: fixed;
     width: 85%;
     height: 80px;
@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 35px;
 }
 
-.titulo_header{
+.titulo_header{  /*CAMBIADO*/
     position: absolute;
     display: inline-block;
     margin: auto;
@@ -62,7 +62,7 @@ body::-webkit-scrollbar-thumb{
     padding: 0;
     height:100%;
     display: table;
-    
+    margin-top: 16px; /* SOLUCION TEMPORAL POR CONFILTO CON BS QUE NO LO QUIERE CENTRAR*/
     font-size: 20px;
 }
 .menu_header li{
@@ -85,8 +85,8 @@ body::-webkit-scrollbar-thumb{
     background: rgba( 23, 42, 110);
 }
 
-            /* SUBMENUS */
 
+            /* SUBMENUS */
 .menu_header > li{
     float: left;
 }
@@ -118,8 +118,16 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(34, 59, 151);
 }
 
-
-
+#header_bt{
+    color: white !important;
+}
+.navbar{
+    background: rgb(40, 106, 192) !important;
+}
+.navbar-brand{
+    background: rgba(38, 58, 109, 0.5);
+    border-radius: 10%;
+}
 /**************************************    TITULO    *********************/
 .titulo{
     width: 100%;
@@ -145,20 +153,22 @@ body::-webkit-scrollbar-thumb{
 
 
 
-/**************************************    LINEA HORIZONTAL    *********************/
-hr{  /* Horizontal Line */
-    width: 62%;
-    height: 10px;
+/**************************************    LINEAS HORIZONTALES    *********************/
+.linea_custom{  /* Horizontal Line */
 
-    background: transparent;
-    -webkit-background-composite: text;
-    -webkit-text-fill-color: transparent;
-    background-image: url(../Recursos/FondoTitulo.jpg);
-    background-attachment: fixed;
+    width: 62% !important;
+    height: 10px!important;
 
-    border-radius: 20px;
-    border-color: black;
+    background: transparent!important;
+    -webkit-background-composite: text!important;
+    -webkit-text-fill-color: transparent!important;
+    background-image: url(../Recursos/FondoTitulo.jpg)!important;
+    background-attachment: fixed!important;
+
+    border-radius: 20px!important;
+    border-color: black!important;
 }
+
 
 
 
