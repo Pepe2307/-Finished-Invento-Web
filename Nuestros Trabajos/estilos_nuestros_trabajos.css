@@ -332,7 +332,7 @@ body::-webkit-scrollbar-thumb{
     color: white;
 }
 #boton_1, #boton_2, #boton_3{
-    background-image: url("/Recursos/fondo.jpg");
+    background-image: url("../Recursos/fondo.jpg");
     color: white;
     font-size: 40px;
 }
