@@ -53,7 +53,7 @@ body::-webkit-scrollbar-thumb{
     position: absolute;
     display: inline-block;
     margin: auto;
-    margin-left: 25%;
+    margin-left: 18%;
     
     
     font-size: 60px;
@@ -172,20 +172,25 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    FORMULARIO    *********************/
 .formulario_container{
-    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     
- 
-    width: 100%;
+    grid-gap: 50px;
+    
+    margin-left: 0;
+    width: 90%;
+    
 }
 .formulario{
-
     text-align: center;
-
+    color: white;
     background: transparent;
     background-image: url(../Recursos/fondo.jpg);
     background-attachment: fixed;
     
-    width: 40%;
+    
+    border-radius: 20px;
+    width: 100%;
     top:45%;
 }
 
@@ -210,25 +215,23 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(39, 95, 184);
     padding: 3%;
     border-radius: 10%;
+    width: 50%;
+    height: 43%;
+    margin: 0;
 }
 
 
-/**************************************    LINEA HORIZONTAL    *********************/
-.segunda_linea hr{
-    position: absolute;
-    top: 98%;
-    left: 19%;
-}
+
 
 
 
 
 /**************************************    FORMULARIO   *********************/
-.formulario{
+/*.formulario{
     
     flex: 1;
     color: white;
-}
+}*/
 
 
 
@@ -240,13 +243,22 @@ body::-webkit-scrollbar-thumb{
 /**************************************    Boton de inicio    *********************/
 .boton_top{
     position: fixed;
+
+    bottom: 8vh;
+    right: 0;
+    /*
+    bottom: 90px;
+    right: 30px;
+    */
+
+    transform: translate(-20px,-20px);
+
     width: 55px;
     height: 55px;
     line-height: 55px;
-    bottom: 90px;
-    right: 30px;
-    border-radius: 50px;
     
+    
+    border-radius: 50px;
     background:rgb(156, 156, 156);
     color: white;
     text-align: center;
@@ -264,13 +276,23 @@ body::-webkit-scrollbar-thumb{
 .boton_whatsapp{
     position: fixed;
 
+    
+    bottom: 0;
+    right: 0;
+    /*
+    bottom: 20px;
+    right: 30px;
+    */
+
+    transform: translate(-20px,-20px);
+    
     width: 55px;
     height: 55px;
     line-height: 55px;
-    bottom: 20px;
-    right: 30px;
-    border-radius: 50px;
+    
 
+
+    border-radius: 50px;
     background: green;
     color: white;
     text-align: center;
@@ -365,7 +387,23 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    RESPONSIVE MOBILE   *********************/
-@media screen and (max-width: 700px){
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+@media screen and (max-width: 992px){
 
     /*Header*/
     .menu_header{
@@ -390,11 +428,12 @@ body::-webkit-scrollbar-thumb{
 
 
 
+    /*FOOTER*/
     .footer{
         flex: 1;
         display: flex;
         flex-wrap: nowrap;
-        
+        width: 100%;
         align-content: center;
         flex-direction: column;
         align-items: center; 
@@ -404,13 +443,17 @@ body::-webkit-scrollbar-thumb{
     }
     .footer .footer_contacto{
         margin-left: 0;
+        margin-top: 4vh;
     }
     .footer .iconos_redes{
         margin-left: 0;
+        margin-bottom: 2vh;
     }
     .mapa{
         display: none;
     }
+
+    /*Botones en Mobile Desactivados*/
     .Top_Button{
         display: none;
     }
@@ -419,4 +462,56 @@ body::-webkit-scrollbar-thumb{
         display: none;
     }
 
+    
+}
+
+
+@media screen and (min-width: 0px ) and (max-width: 1300px){
+    .formulario_bt{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .formulario_container{
+        width: 100%;
+        grid-gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .formulario{ 
+        width: 100%;
+    }
+
+    .formulario_bt{
+        width: 50%;
+        height: 100%;
+    }
+}
+
+
+@media screen and (min-width: 993px){
+   .titulo_header{
+       display: none;
+   }
+}
+@media screen and (min-width: 1156px){
+   .titulo_header{
+       position: absolute;
+       display: inline-block;
+   
+       margin-left: 0%;
+   
+   
+       font-size: 60px;
+  
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       background-image: url(../Recursos/FondoTitulo.jpg);
+       background-attachment: fixed;
+
+
+       animation: fadeIn; 
+       animation-duration: 2s; 
+   }
 }

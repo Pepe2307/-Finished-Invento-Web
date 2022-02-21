@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb{
     position: absolute;
     display: inline-block;
     
-    margin-left: 25%;
+    margin-left: 18%;
     
     
     font-size: 60px;
@@ -419,7 +419,7 @@ body::-webkit-scrollbar-thumb{
 }
 */
 
-/**************************************    SLIDER    *********************/
+/**************************************    SLIDER VIEJO HECHO A MANO    *********************/
 
 .slider{
     flex: 1;
@@ -472,7 +472,7 @@ ul.imagenes_slider li:target{
 }
 
 
-/*********** Menu/Botones de Slider **********/
+/*********** Menu/Botones de SLIDER VIEJO **********/
 
 .menu{
     text-align: center;
@@ -494,6 +494,12 @@ ul.imagenes_slider li:target{
     font-size: 20px;
     border-radius: 100%;
 }
+/*Carrousel BT5 DE OTRA FORMA DA PROBLEMAS CON EL TAMAÑO*/
+.carousel {
+    flex: 1;
+    width:640px;
+    height:700px;
+  }
 
 
 
@@ -519,12 +525,15 @@ ul.imagenes_slider li:target{
 .galeria_imagenes img{
     position: relative;
 
-    border-radius: 20px;
-    padding:10px;
+    border-radius: 60px;
+    padding: 10px;
     background:transparent;
-
+    
+    width: 600px;
+    height: 600px;
     transition: 800ms;
 }
+
 
 .galeria_imagenes img:hover{
     transform: scale(1.05);
@@ -581,13 +590,22 @@ ul.imagenes_slider li:target{
 /**************************************    Boton de inicio    *********************/
 .boton_top{
     position: fixed;
+
+    bottom: 8vh;
+    right: 0;
+    /*
+    bottom: 90px;
+    right: 30px;
+    */
+
+    transform: translate(-20px,-20px);
+
     width: 55px;
     height: 55px;
     line-height: 55px;
-    bottom: 90px;
-    right: 30px;
-    border-radius: 50px;
     
+    
+    border-radius: 50px;
     background:rgb(156, 156, 156);
     color: white;
     text-align: center;
@@ -605,13 +623,23 @@ ul.imagenes_slider li:target{
 .boton_whatsapp{
     position: fixed;
 
+    
+    bottom: 0;
+    right: 0;
+    /*
+    bottom: 20px;
+    right: 30px;
+    */
+
+    transform: translate(-20px,-20px);
+    
     width: 55px;
     height: 55px;
     line-height: 55px;
-    bottom: 20px;
-    right: 30px;
-    border-radius: 50px;
+    
 
+
+    border-radius: 50px;
     background: green;
     color: white;
     text-align: center;
@@ -702,14 +730,26 @@ ul.imagenes_slider li:target{
 
 
 
-/*Carrousel BT5 DE OTRA FORMA DA PROBLEMAS CON EL TAMAÑO*/
-  .carousel {
-    width:640px;
-    height:700px;
-  }
-  
+
 /**************************************    RESPONSIVE MOBILE   *********************/
-@media screen and (max-width: 700px){
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+@media screen and (max-width: 992px){
 
     /*Header*/
     .menu_header{
@@ -736,12 +776,13 @@ ul.imagenes_slider li:target{
         display: none;
     }
 
-    /*Carrousel BT5 DE OTRA FORMA DA PROBLEMAS CON EL TAMAÑO - VER. RESPONSIVE*/
+    /*Carrousel BT DE OTRA FORMA DA PROBLEMAS CON EL TAMAÑO - VER. RESPONSIVE*/
     .carousel {
         width: 100%;
         height:500px;
     }
 
+    /* BANNER DE SKILLS*/
     .Skills{
         display: flex;
         flex-direction: column;
@@ -749,28 +790,41 @@ ul.imagenes_slider li:target{
         align-items:center;
         width: 100%;
     }
+    .Marketing{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .Diseño_Grafico{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .Social_Media{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
 
+    /*Slider Viejo desactivado*/
     .slider{
         display: none;
     }
 
+    /*Galeria de Imagenes*/
     .galeria_imagenes{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
 
-    
-    
     .galeria_imagenes img{
-        width: 100px;
-        height: 100px;
+        width: 500px;
+        height: 500px;
     }
 
+    /*FOOTER*/
     .footer{
         flex: 1;
         display: flex;
         flex-wrap: nowrap;
-        
+        width: 100%;
         align-content: center;
         flex-direction: column;
         align-items: center; 
@@ -780,13 +834,17 @@ ul.imagenes_slider li:target{
     }
     .footer .footer_contacto{
         margin-left: 0;
+        margin-top: 4vh;
     }
     .footer .iconos_redes{
         margin-left: 0;
+        margin-bottom: 2vh;
     }
     .mapa{
         display: none;
     }
+
+    /*Botones en Mobile Desactivados*/
     .Top_Button{
         display: none;
     }
@@ -794,5 +852,46 @@ ul.imagenes_slider li:target{
     .whatsapp{
         display: none;
     }
+}
 
+
+@media screen and (max-width: 1300px){
+     /*Galeria de Imagenes*/
+     .galeria_imagenes{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .galeria_imagenes img{
+        width: 500px;
+        height: 500px;
+    }
+    
+}
+
+/*TITULO HEADER*/
+@media screen and (min-width: 993px){
+    .titulo_header{
+        display: none;
+    }
+}
+@media screen and (min-width: 1156px){
+    .titulo_header{
+        position: absolute;
+        display: inline-block;
+    
+        margin-left: 0%;
+    
+    
+        font-size: 60px;
+   
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: url(../Recursos/FondoTitulo.jpg);
+        background-attachment: fixed;
+
+
+        animation: fadeIn; 
+        animation-duration: 2s; 
+    }
 }

@@ -58,8 +58,7 @@ body::-webkit-scrollbar-thumb{
     position: absolute;
     display: inline-block;
     
-    margin-left: 25%;
-    
+    margin-left: 18%;    
     
     font-size: 60px;
    
@@ -246,13 +245,22 @@ body::-webkit-scrollbar-thumb{
 /**************************************    Boton de inicio    *********************/
 .boton_top{
     position: fixed;
+
+    bottom: 8vh;
+    right: 0;
+    /*
+    bottom: 90px;
+    right: 30px;
+    */
+
+    transform: translate(-20px,-20px);
+
     width: 55px;
     height: 55px;
     line-height: 55px;
-    bottom: 90px;
-    right: 30px;
-    border-radius: 50px;
     
+    
+    border-radius: 50px;
     background:rgb(156, 156, 156);
     color: white;
     text-align: center;
@@ -270,13 +278,23 @@ body::-webkit-scrollbar-thumb{
 .boton_whatsapp{
     position: fixed;
 
+    
+    bottom: 0;
+    right: 0;
+    /*
+    bottom: 20px;
+    right: 30px;
+    */
+
+    transform: translate(-20px,-20px);
+    
     width: 55px;
     height: 55px;
     line-height: 55px;
-    bottom: 20px;
-    right: 30px;
-    border-radius: 50px;
+    
 
+
+    border-radius: 50px;
     background: green;
     color: white;
     text-align: center;
@@ -371,7 +389,23 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    RESPONSIVE MOBILE   *********************/
-@media screen and (max-width: 700px){
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+@media screen and (max-width: 992px){
 
     /*Header*/
     .menu_header{
@@ -386,6 +420,7 @@ body::-webkit-scrollbar-thumb{
         margin: auto;
     }
 
+    /* BANNER DE SKILLS*/
     .Skills{
         display: flex;
         flex-direction: column;
@@ -393,14 +428,26 @@ body::-webkit-scrollbar-thumb{
         align-items:center;
         width: 100%;
     }
+    .Marketing{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .Diseño_Grafico{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .Social_Media{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
 
 
-
+    /*FOOTER*/
     .footer{
         flex: 1;
         display: flex;
         flex-wrap: nowrap;
-        
+        width: 100%;
         align-content: center;
         flex-direction: column;
         align-items: center; 
@@ -410,13 +457,17 @@ body::-webkit-scrollbar-thumb{
     }
     .footer .footer_contacto{
         margin-left: 0;
+        margin-top: 4vh;
     }
     .footer .iconos_redes{
         margin-left: 0;
+        margin-bottom: 2vh;
     }
     .mapa{
         display: none;
     }
+
+    /*Botones en Mobile Desactivados*/
     .Top_Button{
         display: none;
     }
@@ -425,4 +476,30 @@ body::-webkit-scrollbar-thumb{
         display: none;
     }
 
+}
+
+@media screen and (min-width: 993px){
+    .titulo_header{
+        display: none;
+    }
+}
+@media screen and (min-width: 1156px){
+    .titulo_header{
+        position: absolute;
+        display: inline-block;
+    
+        margin-left: 0%;
+    
+    
+        font-size: 60px;
+   
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: url(../Recursos/FondoTitulo.jpg);
+        background-attachment: fixed;
+
+
+        animation: fadeIn; 
+        animation-duration: 2s; 
+    }
 }

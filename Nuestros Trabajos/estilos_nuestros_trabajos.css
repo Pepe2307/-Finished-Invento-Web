@@ -55,7 +55,8 @@ body::-webkit-scrollbar-thumb{
     position: absolute;
     display: inline-block;
     margin: auto;
-    margin-left: 25%;
+
+    margin-left: 18%;
     
     
     font-size: 60px;
@@ -287,9 +288,12 @@ body::-webkit-scrollbar-thumb{
 .galeria_imagenes img{
     position: relative;
 
-    border-radius: 20px;
-    background:transparent;
+    border-radius: 60px;
     padding: 10px;
+    background:transparent;
+    
+    width: 600px;
+    height: 600px;
     transition: 800ms;
 }
 
@@ -305,7 +309,7 @@ body::-webkit-scrollbar-thumb{
 
 
 
-/**************************************    GALERIA    *********************/
+/**************************************    ACORDEON    *********************/
 .titulo_acordeon{
     font-family: 'Lobster', cursive; /* Fuente Importada */
     font-size: 50px;
@@ -335,13 +339,15 @@ body::-webkit-scrollbar-thumb{
 
 
 
-
+/*ACORDEON DE BT*/
 .accordion-button:not(.collapsed)::after {
     background-image: url("/Recursos/inventoIcon.png");
   }
   .accordion-button::after {
     background-image: url("/Recursos/inventoIcon.png");
   }
+
+
 /**************************************    Boton de inicio    *********************/
 .boton_top{
     position: fixed;
@@ -353,7 +359,7 @@ body::-webkit-scrollbar-thumb{
     right: 30px;
     */
 
-
+    transform: translate(-20px,-20px);
 
     width: 55px;
     height: 55px;
@@ -386,11 +392,14 @@ body::-webkit-scrollbar-thumb{
     right: 30px;
     */
 
+    transform: translate(-20px,-20px);
     
     width: 55px;
     height: 55px;
     line-height: 55px;
     
+
+
     border-radius: 50px;
     background: green;
     color: white;
@@ -488,8 +497,26 @@ body::-webkit-scrollbar-thumb{
 }
 
 /**************************************    RESPONSIVE MOBILE   *********************/
-@media screen and (max-width: 700px){
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+@media screen and (max-width: 992px){
+
+    /*HEADER*/
     .menu_header{
         display: none;
     }
@@ -498,6 +525,7 @@ body::-webkit-scrollbar-thumb{
         width: 70%;
     }
 
+    /*GALERIA*/
     .galeria_imagenes{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -505,14 +533,16 @@ body::-webkit-scrollbar-thumb{
 
     
     .galeria_imagenes img{
-        width: 100px;
-        height: 100px;
+        width: 500px;
+        height: 500px;
     }
 
+    /*ACORDEON*/
     .accordion{
         width: 100%;
     }
 
+    /*FOOTER*/
     .footer{
         flex: 1;
         display: flex;
@@ -534,6 +564,8 @@ body::-webkit-scrollbar-thumb{
     .mapa{
         display: none;
     }
+    
+    /*BOTONES*/
     .Top_Button{
         display: none;
     }
@@ -542,4 +574,45 @@ body::-webkit-scrollbar-thumb{
         display: none;
     }
 
+}
+
+@media screen and (max-width: 1300px){
+    /*Galeria de Imagenes*/
+    .galeria_imagenes{
+       display: grid;
+       grid-template-columns: repeat(1, 1fr);
+   }
+
+   .galeria_imagenes img{
+       width: 500px;
+       height: 500px;
+   }
+   
+}
+
+
+@media screen and (min-width: 993px){
+    .titulo_header{
+        display: none;
+    }
+}
+@media screen and (min-width: 1156px){
+    .titulo_header{
+        position: absolute;
+        display: inline-block;
+    
+        margin-left: 0%;
+    
+    
+        font-size: 60px;
+   
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: url(../Recursos/FondoTitulo.jpg);
+        background-attachment: fixed;
+
+
+        animation: fadeIn; 
+        animation-duration: 2s; 
+    }
 }

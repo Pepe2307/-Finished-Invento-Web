@@ -141,7 +141,7 @@ body::-webkit-scrollbar-thumb{
     
 
     font-family: 'Lobster', cursive; /* Fuente Importada */
-    font-size: 50px;
+    font-size: 75px;
     mask-border-width: 20px;
     border-radius: 20px;
     border-color: black;
@@ -149,8 +149,12 @@ body::-webkit-scrollbar-thumb{
 .titulo h1{
     padding-top: 90px;
     margin: auto;
+    font-size: 75px;
 }
-
+.titulo h4{
+    margin: 65px;
+    font-size: 50px;
+}
 
 
 /**************************************    LINEAS HORIZONTALES    *********************/
@@ -172,14 +176,21 @@ body::-webkit-scrollbar-thumb{
 
 
 
-/**************************************    FOTO HOOVER    *********************/
+/**************************************    FOTOS HOOVER    *********************/
 .grupo_fotos{
-    display:block;
+    /*display:block;*/
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    justify-items: center;
+    align-items: center;
 }
 .grupo_fotos img{
     padding-right: 70px;
 }
 
+/**************************************    FOTO DAMIAN    *********************/
 .presentacion_Damian{ /* ACOMODAR POSITIONS */
     width: 100%;
     margin:auto;
@@ -192,7 +203,7 @@ body::-webkit-scrollbar-thumb{
     float: left;
     position:relative;
     height: 640px;
-    width: 640px;
+    width: 600px;
     overflow: hidden;
     border-radius: 100px;
     margin-right: 10px;
@@ -208,7 +219,7 @@ body::-webkit-scrollbar-thumb{
 .presentacion_Damian figure .capa{
     position: absolute;
     top:0;
-    width: 640px;
+    width: 600px;
     height: 640px;
     background: rgba(0,103,123,0.7);
     opacity: 0;
@@ -249,6 +260,77 @@ body::-webkit-scrollbar-thumb{
 }
 
 
+/**************************************    FOTO INVENTO    *********************/
+.presentacion_invento{
+    width: 100%;
+    margin:auto;
+    font-size: 40px;
+    color:white;
+    margin-top: 30px;
+
+}
+.presentacion_invento figure{
+    float: left;
+    position:relative;
+    height: 640px;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 400px;
+    margin-right: 10px;
+}
+.presentacion_invento figure img{
+    transition: all 700ms ease-out;
+    /* border-right: 6px solid lightblue;
+    border-top: 6px solid lightblue; */
+}
+.presentacion_invento figure:hover > img{
+    transform: scale(1.1);
+}
+.presentacion_invento figure .capa{
+    position: absolute;
+    top:0;
+    width: 600px;
+    height: 640px;
+    background: rgba(0,103,123,0.7);
+    opacity: 0;
+    visibility: hidden;
+    text-align:center;
+    transition: all 700ms ease-out;
+    cursor: pointer;
+}
+.presentacion_invento figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+.presentacion_invento figure .capa p{
+    line-height: 1.5;
+    transition: all 700ms ease-out;
+    font-size: 30px;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(../Recursos/FondoTitulo.jpg);
+    background-attachment: fixed;
+}
+.presentacion_invento figure .capa h3{
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 120px;
+    transition: all 700ms ease-out;
+    margin-top: 40px;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(../Recursos/FondoTitulo.jpg);
+    background-attachment: fixed;
+}
+.presentacion_invento figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+
+
 
 /**************************************    FOTO PABLO    *********************/
 .presentacion_Pablo{
@@ -263,7 +345,7 @@ body::-webkit-scrollbar-thumb{
     float: left;
     position:relative;
     height: 640px;
-    width: 640px;
+    width: 600px;
     overflow: hidden;
     border-radius: 100px;
     margin-right: 10px;
@@ -279,7 +361,7 @@ body::-webkit-scrollbar-thumb{
 .presentacion_Pablo figure .capa{
     position: absolute;
     top:0;
-    width: 640px;
+    width: 600px;
     height: 640px;
     background: rgba(0,103,123,0.7);
     opacity: 0;
@@ -336,7 +418,7 @@ body::-webkit-scrollbar-thumb{
     float: left;
     position:relative;
     height: 640px;
-    width: 640px;
+    width: 600px;
     overflow: hidden;
     border-radius: 100px;
     margin-right: 10px;
@@ -352,7 +434,7 @@ body::-webkit-scrollbar-thumb{
 .presentacion_Nico figure .capa{
     position: absolute;
     top:0;
-    width: 640px;
+    width: 600px;
     height: 640px;
     background: rgba(0,103,123,0.7);
     opacity: 0;
@@ -394,7 +476,7 @@ body::-webkit-scrollbar-thumb{
 
 
 
-/**************************************    FOTO NICO    *********************/
+/**************************************    FOTO LOLA    *********************/
 .presentacion_Lola{
     width: 100%;
     margin:auto;
@@ -407,7 +489,7 @@ body::-webkit-scrollbar-thumb{
     float: left;
     position:relative;
     height: 640px;
-    width: 640px;
+    width: 600px;
     overflow: hidden;
     border-radius: 100px;
     margin-right: 10px;
@@ -423,7 +505,7 @@ body::-webkit-scrollbar-thumb{
 .presentacion_Lola figure .capa{
     position: absolute;
     top:0;
-    width: 640px;
+    width: 600px;
     height: 640px;
     background: rgba(0,103,123,0.7);
     opacity: 0;
@@ -462,6 +544,77 @@ body::-webkit-scrollbar-thumb{
     margin-top: 70px;
     margin-bottom: 15px;
 }
+
+
+/**************************************    FOTO JOAQUIN    *********************/
+.presentacion_joaquin{
+    width: 100%;
+    margin:auto;
+    
+    font-size: 40px;
+    color:white;
+    margin-top: 30px;
+}
+.presentacion_joaquin figure{
+    float: left;
+    position:relative;
+    height: 640px;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+.presentacion_joaquin figure img{
+    transition: all 700ms ease-out;
+    /* border-right: 6px solid lightblue;
+    border-top: 6px solid lightblue; */
+}
+.presentacion_joaquin figure:hover > img{
+    transform: scale(1.1);
+}
+.presentacion_joaquin figure .capa{
+    position: absolute;
+    top:0;
+    width: 600px;
+    height: 640px;
+    background: rgba(0,103,123,0.7);
+    opacity: 0;
+    visibility: hidden;
+    text-align:center;
+    transition: all 700ms ease-out;
+    cursor: pointer;
+}
+.presentacion_joaquin figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+.presentacion_joaquin figure .capa p{
+    line-height: 1.5;
+    transition: all 700ms ease-out;
+    font-size: 30px;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(../Recursos/FondoTitulo.jpg);
+    background-attachment: fixed;
+}
+.presentacion_joaquin figure .capa h3{
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 120px;
+    transition: all 700ms ease-out;
+    margin-top: 40px;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(../Recursos/FondoTitulo.jpg);
+    background-attachment: fixed;
+}
+.presentacion_joaquin figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
 
 
 
@@ -519,10 +672,6 @@ body::-webkit-scrollbar-thumb{
     color: green;
     background: white;
 }
-
-
-
-
 
 
 
@@ -602,8 +751,25 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    RESPONSIVE MOBILE   *********************/
-@media screen and (max-width: 700px){
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+@media screen and (max-width: 992px){
+
+    
     /*Header*/
     .menu_header{
         display: none;
@@ -616,69 +782,6 @@ body::-webkit-scrollbar-thumb{
     .titulo_header{
         margin: auto;
     }
-
-    /*PRESENTACIONES*/
-    .presentacion_Damian figure{
-        height: 600px;
-        width: 400px;
-        margin: 0;
-    }
-    .presentacion_Damian figure .capa{
-        display: none;
-    }
-    .presentacion_Damian figure img{
-        object-fit:cover;
-        height: 600px;
-        width: 400px;
-    }
-
-
-    .presentacion_Pablo figure{
-        height: 600px;
-        width: 400px;
-        margin: 0;
-    }
-    .presentacion_Pablo figure .capa{
-        display: none;
-    }
-    .presentacion_Pablo figure img{
-        object-fit:cover;
-        height: 600px;
-        width: 400px;
-    }
-
-
-
-    .presentacion_Nico figure{
-        height: 600px;
-        width: 400px;
-        margin: 0;
-    }
-    .presentacion_Nico figure .capa{
-        display: none;
-    }
-    .presentacion_Nico figure img{
-        object-fit:cover;
-        height: 600px;
-        width: 400px;
-    }
-
-
-
-    .presentacion_Lola figure{
-        height: 600px;
-        width: 400px;
-        margin: 0;
-    }
-    .presentacion_Lola figure .capa{
-        display: none;
-    }
-    .presentacion_Lola figure img{
-        object-fit:cover;
-        height: 600px;
-        width: 400px;
-    }
-
 
     /* Footer */
     .footer{
@@ -711,4 +814,70 @@ body::-webkit-scrollbar-thumb{
         display: none;
     }
 
+}
+
+
+/*TITULO HEADER*/
+@media screen and (min-width: 993px){
+    .titulo_header{
+        display: none;
+    }
+}
+@media screen and (min-width: 1156px){
+    .titulo_header{
+        position: absolute;
+        display: inline-block;
+    
+        margin-left: 0%;
+    
+    
+        font-size: 60px;
+   
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: url(../Recursos/FondoTitulo.jpg);
+        background-attachment: fixed;
+
+
+        animation: fadeIn; 
+        animation-duration: 2s; 
+    }
+}
+
+/*GALERIA*/
+@media screen and (max-width: 1300px){
+    .grupo_fotos{
+        /*display:block;*/
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        justify-items: center;
+        align-items: center;
+
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+        
+    }
+    
+    .presentacion_Damian{
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+
+    .presentacion_Damian figure{
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+    .presentacion_Damian figure img{
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
 }
