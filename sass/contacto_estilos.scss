@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/*Fuente de Google Fonts Importada a CSS*/
+
+html{
+    scroll-behavior: smooth;  /*scroll de vinculos suavizado*/
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh; /* PARA SEPARACIONES ENTRE FLEX */
+
+    align-items: center; /*estos dos son experimentales */
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 20;
+    background: url(../Recursos/azul.jpg);   
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lobster', cursive;
+    /* background-repeat: no-repeat; */
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    background:rgba( 23, 42, 90);
+}
+body::-webkit-scrollbar-thumb{
+    background:rgba(75, 97, 223, 0.801);
+    border-radius:10pt;
+    /*border-right: 2px solid rgba( 23, 42, 110);*/
+}
+
+
+
+
+/**************************************    HEADER/CABECERA    *********************/
+.header{
+    position: fixed;
+    width: 85%;
+    height: 80px;
+    display: block;
+    background-color: transparent;
+    z-index:1000;
+
+    margin: 0 auto;
+    background-color: rgb(34, 59, 151);
+    border-radius: 35px;
+}
+
+.titulo_header{
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    margin-left: 18%;
+    
+    
+    font-size: 60px;
+   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(../Recursos/FondoTitulo.jpg);
+    background-attachment: fixed;
+}
+.menu_header{
+    float:right;
+    padding: 0;
+    height:100%;
+    display: table;
+    margin-top: 16px; /* SOLUCION TEMPORAL POR CONFILTO CON BS QUE NO LO QUIERE CENTRAR*/
+    font-size: 20px;
+
+    li{
+        text-decoration: none;
+        display: inline-block;
+        text-align:center;
+        color:white;
+        list-style:none;
+    }
+    
+}
+/*.menu_header li{
+    text-decoration: none;
+    display: inline-block;
+    text-align:center;
+    color:white;
+    list-style:none;
+}*/
+.menu_header li a{
+    display: inline-block;
+    padding:10px 20px;
+    
+    text-align:center;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu_header li a:hover{
+    background: rgba( 23, 42, 110);
+}
+
+            /* SUBMENUS */
+
+.menu_header > li{
+    float: left;
+}
+.menu_header li ul{
+    position: absolute;
+    top: 65px;
+    display: none;
+
+    
+    min-width: 140px;
+    padding:10px 20px;
+    
+    text-align:center;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu_header li ul li{
+    display: block;
+    
+    padding: 5px;
+    border-radius: 20px;
+}
+.menu_header li ul li:hover{
+    background: rgba( 23, 42, 110);
+}
+.menu_header li:hover > ul{
+    display: block;
+    background-color: rgb(34, 59, 151);
+}
+
+
+/**************************************    TITULO    *********************/
+.titulo{
+    flex: 1;
+    width: 100%;
+    text-align:center;
+   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(../Recursos/FondoTitulo.jpg);
+    background-attachment: fixed;
+    /* background-size: cover;  utilizar cuando consiga una mejor imagen de fondo */
+    
+
+    font-family: 'Lobster', cursive; /* Fuente Importada */
+    font-size: 50px;
+    mask-border-width: 20px;
+    border-radius: 20px;
+    border-color: black;
+}
+.titulo h1{
+    padding-top: 90px;
+    margin: auto;
+}
+
+
+
+/**************************************    LINEAS HORIZONTALES    *********************/
+.linea_custom{  /* Horizontal Line */
+
+    width: 62% !important;
+    height: 10px!important;
+
+    background: transparent!important;
+    -webkit-background-composite: text!important;
+    -webkit-text-fill-color: transparent!important;
+    background-image: url(../Recursos/FondoTitulo.jpg)!important;
+    background-attachment: fixed!important;
+
+    border-radius: 20px!important;
+    border-color: black!important;
+}
+
+
+
+
+/**************************************    FORMULARIO    *********************/
+.formulario_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    grid-gap: 50px;
+    
+    margin-left: 0;
+    width: 90%;
+    
+}
+.formulario{
+    text-align: center;
+    color: white;
+    background: transparent;
+    background-image: url(../Recursos/fondo.jpg);
+    background-attachment: fixed;
+    
+    
+    border-radius: 20px;
+    width: 100%;
+    top:45%;
+}
+
+.formulario h3{
+    
+    left: 290px;
+    bottom: 20px;   
+    font-size: 30px;
+}
+
+.botones{
+    
+
+    left: 300px;
+    bottom: 320px;
+}
+
+/* FORMULARIO BT*/
+.formulario_bt{
+    color: white;
+    font-size: 20px;
+    background-color: rgb(39, 95, 184);
+    padding: 3%;
+    border-radius: 10%;
+    width: 50%;
+    height: 43%;
+    margin: 0;
+}
+
+
+
+
+
+
+
+/**************************************    FORMULARIO   *********************/
+/*.formulario{
+    
+    flex: 1;
+    color: white;
+}*/
+
+
+
+
+
+
+
+
+/**************************************    Boton de inicio    *********************/
+.boton_top{
+    position: fixed;
+
+    bottom: 8vh;
+    right: 0;
+    /*
+    bottom: 90px;
+    right: 30px;
+    */
+
+    transform: translate(-20px,-20px);
+
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    
+    
+    border-radius: 50px;
+    background:rgb(156, 156, 156);
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 2);
+    z-index: 100;
+}
+.boton_top:hover{
+    text-decoration: underline;
+    background: white;
+    color: rgb(156, 156, 156);
+    
+}
+/**************************************    Boton de WhatsApp   *********************/
+.boton_whatsapp{
+    position: fixed;
+
+    
+    bottom: 0;
+    right: 0;
+    /*
+    bottom: 20px;
+    right: 30px;
+    */
+
+    transform: translate(-20px,-20px);
+    
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    
+
+
+    border-radius: 50px;
+    background: green;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 2);
+    z-index: 100;
+}
+.boton_whatsapp:hover{
+    text-decoration: none;
+    color: green;
+    background: white;
+}
+
+
+
+
+
+
+
+
+
+/**************************************    FOOTER   *********************/
+.footer{
+    flex: 1;
+
+    display: flex;
+    
+    flex-flow: row, wrap;
+    justify-content: space-around;
+    align-items:center;
+
+    width: 100%;
+    height: 400px;
+
+    font-size: 20px;
+    color:white;
+
+    border-top: 6px solid;
+    border-color: rgba( 23, 42, 110);
+
+    background: transparent;
+    background-image: url(../Recursos/fondo.jpg);
+    background-attachment: fixed;
+}
+
+
+.footer .footer_contacto{
+    margin-left: auto;
+    text-align: center;
+    background-color: rgba(5,7,12, 0.50);
+    border-radius: 15%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer .iconos_redes{
+    margin-left: auto;
+
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background: rgba(5,7,12, 0.50);
+    border-radius: 15%;
+    border-radius: 10px solid transparent;
+}
+
+.footer .iconos_redes ul{
+    
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+
+}
+.footer .iconos_redes li{
+    display: inline-block;
+    list-style: none;
+    text-align: left;
+    font-size: 70px;
+}
+
+.footer .iconos_redes li a{
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+
+.footer .mapa{
+    margin-left: auto;
+}
+
+
+/**************************************    RESPONSIVE MOBILE   *********************/
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+@media screen and (max-width: 992px){
+
+    /*Header*/
+    .menu_header{
+        display: none;
+    }
+
+    .header{
+        width: 70%;
+    }
+
+    .titulo_header{
+        margin: auto;
+    }
+
+    .Skills{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items:center;
+        width: 100%;
+    }
+
+
+
+    /*FOOTER*/
+    .footer{
+        flex: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        align-content: center;
+        flex-direction: column;
+        align-items: center; 
+        justify-items: center;
+        justify-content: center;
+        gap: 2vh;
+    }
+    .footer .footer_contacto{
+        margin-left: 0;
+        margin-top: 4vh;
+    }
+    .footer .iconos_redes{
+        margin-left: 0;
+        margin-bottom: 2vh;
+    }
+    .mapa{
+        display: none;
+    }
+
+    /*Botones en Mobile Desactivados*/
+    .Top_Button{
+        display: none;
+    }
+
+    .whatsapp{
+        display: none;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 0px ) and (max-width: 1300px){
+    .formulario_bt{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .formulario_container{
+        width: 100%;
+        grid-gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .formulario{ 
+        width: 100%;
+    }
+
+    .formulario_bt{
+        width: 50%;
+        height: 100%;
+    }
+}
+
+
+@media screen and (min-width: 993px){
+   .titulo_header{
+       display: none;
+   }
+}
+@media screen and (min-width: 1156px){
+   .titulo_header{
+       position: absolute;
+       display: inline-block;
+   
+       margin-left: 0%;
+   
+   
+       font-size: 60px;
+  
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       background-image: url(../Recursos/FondoTitulo.jpg);
+       background-attachment: fixed;
+
+
+       animation: fadeIn; 
+       animation-duration: 2s; 
+   }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "git_invento",
+  "version": "1.0.0",
+  "description": "Pagina Web de Invento Design por Pablo Paez",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pepe2307/PaginaInvento_PabloPaez.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pepe2307/PaginaInvento_PabloPaez/issues"
+  },
+  "homepage": "https://github.com/Pepe2307/PaginaInvento_PabloPaez#readme"
+}
