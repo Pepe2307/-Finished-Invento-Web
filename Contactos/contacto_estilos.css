@@ -6,19 +6,28 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 5vh;
   /* PARA SEPARACIONES ENTRE FLEX */
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /*estos dos son experimentales */
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0;
   padding: 20;
   background: url(../Recursos/azul.jpg);
   background-size: cover;
   background-position: center;
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
   /* background-repeat: no-repeat; */
 }
 
@@ -67,6 +76,7 @@ body::-webkit-scrollbar-thumb {
   /* SOLUCION TEMPORAL POR CONFILTO CON BS QUE NO LO QUIERE CENTRAR*/
   font-size: 20px;
 }
+
 .menu_header li {
   text-decoration: none;
   display: inline-block;
@@ -129,7 +139,9 @@ body::-webkit-scrollbar-thumb {
 
 /**************************************    TITULO    *********************/
 .titulo {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
   text-align: center;
   -webkit-background-clip: text;
@@ -137,10 +149,11 @@ body::-webkit-scrollbar-thumb {
   background-image: url(../Recursos/FondoTitulo.jpg);
   background-attachment: fixed;
   /* background-size: cover;  utilizar cuando consiga una mejor imagen de fondo */
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
   /* Fuente Importada */
   font-size: 50px;
-  mask-border-width: 20px;
+  -webkit-mask-box-image-width: 20px;
+          mask-border-width: 20px;
   border-radius: 20px;
   border-color: black;
 }
@@ -166,8 +179,10 @@ body::-webkit-scrollbar-thumb {
 
 /**************************************    FORMULARIO    *********************/
 .formulario_container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px;
   margin-left: 0;
   width: 90%;
@@ -209,7 +224,7 @@ body::-webkit-scrollbar-thumb {
 
 /**************************************    FORMULARIO   *********************/
 /*.formulario{
-
+    
     flex: 1;
     color: white;
 }*/
@@ -219,10 +234,11 @@ body::-webkit-scrollbar-thumb {
   bottom: 8vh;
   right: 0;
   /*
-  bottom: 90px;
-  right: 30px;
-  */
-  transform: translate(-20px, -20px);
+    bottom: 90px;
+    right: 30px;
+    */
+  -webkit-transform: translate(-20px, -20px);
+          transform: translate(-20px, -20px);
   width: 55px;
   height: 55px;
   line-height: 55px;
@@ -231,7 +247,8 @@ body::-webkit-scrollbar-thumb {
   color: white;
   text-align: center;
   font-size: 30px;
-  box-shadow: 0px 1px 10px black;
+  -webkit-box-shadow: 0px 1px 10px black;
+          box-shadow: 0px 1px 10px black;
   z-index: 100;
 }
 
@@ -247,10 +264,11 @@ body::-webkit-scrollbar-thumb {
   bottom: 0;
   right: 0;
   /*
-  bottom: 20px;
-  right: 30px;
-  */
-  transform: translate(-20px, -20px);
+    bottom: 20px;
+    right: 30px;
+    */
+  -webkit-transform: translate(-20px, -20px);
+          transform: translate(-20px, -20px);
   width: 55px;
   height: 55px;
   line-height: 55px;
@@ -259,7 +277,8 @@ body::-webkit-scrollbar-thumb {
   color: white;
   text-align: center;
   font-size: 30px;
-  box-shadow: 0px 1px 10px black;
+  -webkit-box-shadow: 0px 1px 10px black;
+          box-shadow: 0px 1px 10px black;
   z-index: 100;
 }
 
@@ -270,12 +289,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 /**************************************    FOOTER   *********************/
-.footer {
-  flex: 1;
+.footer, .redes_sass {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row, wrap;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row, wrap;
+          flex-flow: row, wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 400px;
   font-size: 20px;
@@ -287,7 +316,7 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
 }
 
-.footer .footer_contacto {
+.footer .footer_contacto, .redes_sass .footer_contacto {
   margin-left: auto;
   text-align: center;
   background-color: rgba(5, 7, 12, 0.5);
@@ -296,7 +325,7 @@ body::-webkit-scrollbar-thumb {
   padding-right: 10px;
 }
 
-.footer .iconos_redes {
+.footer .iconos_redes, .redes_sass .iconos_redes {
   margin-left: auto;
   padding-right: 50px;
   padding-left: 50px;
@@ -307,27 +336,64 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px solid transparent;
 }
 
-.footer .iconos_redes ul {
+.footer .iconos_redes ul, .redes_sass .iconos_redes ul {
   font-size: 40px;
   margin: 0;
   padding: 0;
 }
 
-.footer .iconos_redes li {
+.footer .iconos_redes li, .redes_sass .iconos_redes li {
   display: inline-block;
   list-style: none;
   text-align: left;
   font-size: 70px;
 }
 
-.footer .iconos_redes li a {
+.footer .iconos_redes li a, .redes_sass .iconos_redes li a {
   width: 50px;
   height: 50px;
   color: white;
 }
 
-.footer .mapa {
+.footer .mapa, .redes_sass .mapa {
   margin-left: auto;
+}
+
+/**************************************    Seccion de redes SASS   *********************/
+/*Mapas*/
+/*Variables*/
+/*Mixin*/
+.redes_sass ul {
+  background-color: rgba(17, 37, 83, 0.8);
+  border-radius: 20px;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.redes_sass li {
+  font-size: 80px;
+  list-style: none;
+  list-style-type: none;
+}
+
+.redes_sass .btn-1 {
+  color: #39a534;
+}
+
+.redes_sass .btn-2 {
+  color: #913ed4;
+}
+
+.redes_sass .btn-3 {
+  color: #275aca;
+}
+
+.redes_sass .fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /**************************************    RESPONSIVE MOBILE   *********************/
@@ -352,87 +418,103 @@ body::-webkit-scrollbar-thumb {
   .menu_header {
     display: none;
   }
-
   .header {
     width: 70%;
   }
-
   .titulo_header {
     margin: auto;
   }
-
   .Skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
   }
-
   /*FOOTER*/
-  .footer {
-    flex: 1;
+  .footer, .redes_sass {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     width: 100%;
-    align-content: center;
-    flex-direction: column;
-    align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     justify-items: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2vh;
   }
-
-  .footer .footer_contacto {
+  .footer .footer_contacto, .redes_sass .footer_contacto {
     margin-left: 0;
     margin-top: 4vh;
   }
-
-  .footer .iconos_redes {
+  .footer .iconos_redes, .redes_sass .iconos_redes {
     margin-left: 0;
     margin-bottom: 2vh;
   }
-
   .mapa {
     display: none;
   }
-
   /*Botones en Mobile Desactivados*/
   .Top_Button {
     display: none;
   }
-
   .whatsapp {
     display: none;
   }
 }
+
 @media screen and (min-width: 0px) and (max-width: 1300px) {
   .formulario_bt {
     width: 100%;
     height: 100%;
   }
 }
+
 @media screen and (max-width: 1300px) {
   .formulario_container {
     width: 100%;
     grid-gap: 0px;
-    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
-
   .formulario {
     width: 100%;
   }
-
   .formulario_bt {
     width: 50%;
     height: 100%;
   }
 }
+
 @media screen and (min-width: 993px) {
   .titulo_header {
     display: none;
   }
 }
+
 @media screen and (min-width: 1156px) {
   .titulo_header {
     position: absolute;
@@ -443,9 +525,10 @@ body::-webkit-scrollbar-thumb {
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
-    animation: fadeIn;
-    animation-duration: 2s;
+    -webkit-animation: fadeIn;
+            animation: fadeIn;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
   }
 }
-
 /*# sourceMappingURL=contacto_estilos.css.map */

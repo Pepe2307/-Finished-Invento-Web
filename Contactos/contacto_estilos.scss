@@ -24,7 +24,7 @@ body{
 
 body::-webkit-scrollbar{
     width: 10px;
-    background:rgba( 23, 42, 90);
+    background:rgba(23, 42, 90, 1);
 }
 body::-webkit-scrollbar-thumb{
     background:rgba(75, 97, 223, 0.801);
@@ -97,7 +97,7 @@ body::-webkit-scrollbar-thumb{
     text-decoration: none;
 }
 .menu_header li a:hover{
-    background: rgba( 23, 42, 110);
+    background: rgba( 23, 42, 110, 1);
 }
 
             /* SUBMENUS */
@@ -126,7 +126,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 20px;
 }
 .menu_header li ul li:hover{
-    background: rgba( 23, 42, 110);
+    background: rgba( 23, 42, 110, 1);
 }
 .menu_header li:hover > ul{
     display: block;
@@ -340,7 +340,7 @@ body::-webkit-scrollbar-thumb{
     color:white;
 
     border-top: 6px solid;
-    border-color: rgba( 23, 42, 110);
+    border-color: rgba( 23, 42, 110, 1);
 
     background: transparent;
     background-image: url(../Recursos/fondo.jpg);
@@ -394,6 +394,52 @@ body::-webkit-scrollbar-thumb{
     margin-left: auto;
 }
 
+/**************************************    Seccion de redes SASS   *********************/
+/*Mapas*/
+$redes:(color-1:#39a534, color-2:#913ed4, color-3:#275aca);
+$icons:(icon_fb:icono_fb, icon_wsp:icono_wsp, icon_instagram:icono_inst);
+
+/*Variables*/
+$tamano_iconos: 80px;
+$color_fondo: rgba(17, 37, 83, 0.8);
+$color_instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+/*Mixin*/
+@mixin specs_lista { 
+    background-color: $color_fondo;
+
+    border-radius: 20px;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.redes_sass{
+    @extend .footer;
+
+    ul{
+        @include specs_lista();
+    }
+    li{
+        font-size: $tamano_iconos;
+
+        list-style: none;
+        list-style-type: none;
+    }
+
+    @for $i from 1 through 3 {
+        .btn-#{$i} {
+            color: map-get($redes, color-#{$i});
+        }
+    }
+
+    .fa-instagram{
+        background: $color_instagram;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
 
 /**************************************    RESPONSIVE MOBILE   *********************/
 /*
