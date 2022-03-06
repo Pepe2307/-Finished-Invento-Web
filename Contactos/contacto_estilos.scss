@@ -8,9 +8,9 @@ html{
 body{
     display: flex;
     flex-direction: column;
-    gap: 5vh; /* PARA SEPARACIONES ENTRE FLEX */
+    gap: 5vh;
 
-    align-items: center; /*estos dos son experimentales */
+    align-items: center;
     justify-content: space-between;
 
     margin: 0;
@@ -19,7 +19,6 @@ body{
     background-size: cover;
     background-position: center;
     font-family: 'Lobster', cursive;
-    /* background-repeat: no-repeat; */
 }
 
 body::-webkit-scrollbar{
@@ -29,7 +28,6 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb{
     background:rgba(75, 97, 223, 0.801);
     border-radius:10pt;
-    /*border-right: 2px solid rgba( 23, 42, 110);*/
 }
 
 
@@ -59,6 +57,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 60px;
    
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -68,7 +67,7 @@ body::-webkit-scrollbar-thumb{
     padding: 0;
     height:100%;
     display: table;
-    margin-top: 16px; /* SOLUCION TEMPORAL POR CONFILTO CON BS QUE NO LO QUIERE CENTRAR*/
+    margin-top: 16px;
     font-size: 20px;
 
     li{
@@ -80,13 +79,7 @@ body::-webkit-scrollbar-thumb{
     }
     
 }
-/*.menu_header li{
-    text-decoration: none;
-    display: inline-block;
-    text-align:center;
-    color:white;
-    list-style:none;
-}*/
+
 .menu_header li a{
     display: inline-block;
     padding:10px 20px;
@@ -141,13 +134,14 @@ body::-webkit-scrollbar-thumb{
     text-align:center;
    
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
-    /* background-size: cover;  utilizar cuando consiga una mejor imagen de fondo */
+ 
     
 
-    font-family: 'Lobster', cursive; /* Fuente Importada */
+    font-family: 'Lobster', cursive; 
     font-size: 50px;
     mask-border-width: 20px;
     border-radius: 20px;
@@ -161,7 +155,7 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    LINEAS HORIZONTALES    *********************/
-.linea_custom{  /* Horizontal Line */
+.linea_custom{  
 
     width: 62% !important;
     height: 10px!important;
@@ -182,6 +176,7 @@ body::-webkit-scrollbar-thumb{
 /**************************************    FORMULARIO    *********************/
 .formulario_container{
     display: grid;
+    -ms-grid-columns: (1fr, 2);
     grid-template-columns: repeat(2, 1fr);
     
     grid-gap: 50px;
@@ -235,16 +230,6 @@ body::-webkit-scrollbar-thumb{
 
 
 
-/**************************************    FORMULARIO   *********************/
-/*.formulario{
-    
-    flex: 1;
-    color: white;
-}*/
-
-
-
-
 
 
 
@@ -255,10 +240,7 @@ body::-webkit-scrollbar-thumb{
 
     bottom: 8vh;
     right: 0;
-    /*
-    bottom: 90px;
-    right: 30px;
-    */
+
 
     transform: translate(-20px,-20px);
 
@@ -288,10 +270,7 @@ body::-webkit-scrollbar-thumb{
     
     bottom: 0;
     right: 0;
-    /*
-    bottom: 20px;
-    right: 30px;
-    */
+
 
     transform: translate(-20px,-20px);
     
@@ -416,6 +395,8 @@ $color_instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #f
 
 .redes_sass{
     @extend .footer;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
 
     ul{
         @include specs_lista();
@@ -441,23 +422,12 @@ $color_instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #f
     }
 }
 
+
+
+
+
+
 /**************************************    RESPONSIVE MOBILE   *********************/
-/*
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
 @media screen and (max-width: 992px){
 
     /*Header*/
@@ -469,9 +439,7 @@ $color_instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #f
         width: 70%;
     }
 
-    .titulo_header{
-        margin: auto;
-    }
+
 
     .Skills{
         display: flex;
@@ -499,10 +467,10 @@ $color_instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #f
     .footer .footer_contacto{
         margin-left: 0;
         margin-top: 4vh;
+        margin-bottom: 4vh;
     }
     .footer .iconos_redes{
-        margin-left: 0;
-        margin-bottom: 2vh;
+        display: none;
     }
     .mapa{
         display: none;
@@ -532,6 +500,7 @@ $color_instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #f
     .formulario_container{
         width: 100%;
         grid-gap: 0px;
+        -ms-grid-columns: (1fr, 2);
         grid-template-columns: repeat(1, 1fr);
     }
     .formulario{ 
@@ -541,6 +510,11 @@ $color_instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #f
     .formulario_bt{
         width: 50%;
         height: 100%;
+
+        position: relative; 
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 4vh;
     }
 }
 
@@ -561,6 +535,7 @@ $color_instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #f
        font-size: 60px;
   
        -webkit-background-clip: text;
+       background-clip:text;
        -webkit-text-fill-color: transparent;
        background-image: url(../Recursos/FondoTitulo.jpg);
        background-attachment: fixed;

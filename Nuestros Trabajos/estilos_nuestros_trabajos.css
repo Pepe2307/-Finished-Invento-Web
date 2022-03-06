@@ -8,9 +8,9 @@ html{
 body{ /*CAMBIADO */
     display: flex;
     flex-direction: column;
-    align-items: center; /*estos dos son experimentales */
+    align-items: center; 
     justify-content: space-between;
-    gap: 2vh; /* PARA SEPARACIONES ENTRE FLEX */
+    gap: 2vh; 
 
     margin: 0;
     padding: 20;
@@ -19,7 +19,7 @@ body{ /*CAMBIADO */
     background-size: cover;
     background-position: center;
     font-family: 'Lobster', cursive;
-    /* background-repeat: no-repeat; */
+ 
 
 }
 
@@ -30,14 +30,14 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb{
     background:rgba(75, 97, 223, 0.801);
     border-radius:10pt;
-    /*border-right: 2px solid rgba( 23, 42, 110);*/
+  
 }
 
 
 
 
 /**************************************    HEADER/CABECERA    *********************/
-.header{ /*CAMBIADO*/
+.header{ 
     position: fixed;
     width: 85%;
     height: 80px;
@@ -51,7 +51,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-.titulo_header{  /*CAMBIADO*/
+.titulo_header{ 
     position: absolute;
     display: inline-block;
     margin: auto;
@@ -62,6 +62,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 60px;
    
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -71,7 +72,7 @@ body::-webkit-scrollbar-thumb{
     padding: 0;
     height:100%;
     display: table;
-    margin-top: 16px; /* SOLUCION TEMPORAL POR CONFILTO CON BS QUE NO LO QUIERE CENTRAR*/
+    margin-top: 16px; 
     font-size: 20px;
 }
 .menu_header li{
@@ -136,6 +137,7 @@ body::-webkit-scrollbar-thumb{
     text-align:center;
    
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -159,7 +161,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 /**************************************    LINEAS HORIZONTALES    *********************/
-.linea_custom{  /* Horizontal Line */
+.linea_custom{  
 
     width: 62% !important;
     height: 10px!important;
@@ -201,12 +203,11 @@ body::-webkit-scrollbar-thumb{
     background-color: brown;
    
     
-    width: 50%;                   /* utilizando la resolucion dada en html */
+    width: 50%;                   
     height: 10%;
     padding: 0;
     margin: 0;
     list-style: none;
-    /*border: 6px solid red;        Cuando quiero poner un borde sale en otro lado (CONSULTAR) */
 
 }
 
@@ -244,7 +245,7 @@ body::-webkit-scrollbar-thumb{
     flex: 1;
     
     text-align: center;
-    margin: 20px; /* probar reemplazar por un top 20px*/
+    margin: 20px; 
 }
 .menu li{
     display: inline-block;
@@ -301,17 +302,13 @@ body::-webkit-scrollbar-thumb{
     transform: scale(1.1);
     z-index: 100;
 }
-/*
-.footer_galeria{
-    grid-column: 1/4;
-}
-*/
+
 
 
 
 /**************************************    ACORDEON    *********************/
 .titulo_acordeon{
-    font-family: 'Lobster', cursive; /* Fuente Importada */
+    font-family: 'Lobster', cursive; 
     font-size: 50px;
     color:white;
 
@@ -339,7 +336,9 @@ body::-webkit-scrollbar-thumb{
 
 
 
-/*ACORDEON DE BT*/
+
+
+                        /*ACORDEON DE BT*/
 .accordion-button:not(.collapsed)::after {
     background-image: url("/Recursos/inventoIcon.png");
   }
@@ -348,16 +347,16 @@ body::-webkit-scrollbar-thumb{
   }
 
 
+
+
+
 /**************************************    Boton de inicio    *********************/
 .boton_top{
     position: fixed;
 
     bottom: 8vh;
     right: 0;
-    /*
-    bottom: 90px;
-    right: 30px;
-    */
+ 
 
     transform: translate(-20px,-20px);
 
@@ -387,10 +386,7 @@ body::-webkit-scrollbar-thumb{
     
     bottom: 0;
     right: 0;
-    /*
-    bottom: 20px;
-    right: 30px;
-    */
+
 
     transform: translate(-20px,-20px);
     
@@ -497,23 +493,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 /**************************************    RESPONSIVE MOBILE   *********************/
-/*
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
-
 @media screen and (max-width: 992px){
 
     /*HEADER*/
@@ -576,7 +555,7 @@ body::-webkit-scrollbar-thumb{
 
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1099px){
     /*Galeria de Imagenes*/
     .galeria_imagenes{
        display: grid;
@@ -587,8 +566,25 @@ body::-webkit-scrollbar-thumb{
        width: 500px;
        height: 500px;
    }
-   
+
 }
+
+@media screen and (min-width: 1100px) and (max-width: 1400px){
+    /*Galeria de Imagenes*/
+    .galeria_imagenes{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+   }
+   .galeria_imagenes img{
+       width: 500px;
+       height: 500px;
+   }
+
+}
+
+
+
+
 
 
 @media screen and (min-width: 993px){
@@ -607,6 +603,7 @@ body::-webkit-scrollbar-thumb{
         font-size: 60px;
    
         -webkit-background-clip: text;
+        background-clip:text;
         -webkit-text-fill-color: transparent;
         background-image: url(../Recursos/FondoTitulo.jpg);
         background-attachment: fixed;

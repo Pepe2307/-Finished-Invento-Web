@@ -13,7 +13,6 @@ body{
     background-size: cover;
     background-position: center;
     font-family: 'Lobster', cursive;
-    /* background-repeat: no-repeat; */
 }
 
 body::-webkit-scrollbar{
@@ -23,14 +22,13 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb{
     background:rgba(75, 97, 223, 0.801);
     border-radius:10pt;
-    /*border-right: 2px solid rgba( 23, 42, 110);*/
 }
 
 
 
 
 /**************************************    HEADER/CABECERA    *********************/
-.header{ /*CAMBIADO*/
+.header{
     position: fixed;
     width: 85%;
     height: 80px;
@@ -43,7 +41,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 35px;
 }
 
-.titulo_header{  /*CAMBIADO*/
+.titulo_header{  
     position: absolute;
     display: inline-block;
     margin: auto;
@@ -53,6 +51,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 60px;
    
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -62,7 +61,7 @@ body::-webkit-scrollbar-thumb{
     padding: 0;
     height:100%;
     display: table;
-    margin-top: 16px; /* SOLUCION TEMPORAL POR CONFILTO CON BS QUE NO LO QUIERE CENTRAR*/
+    margin-top: 16px; 
     font-size: 20px;
 }
 .menu_header li{
@@ -134,13 +133,13 @@ body::-webkit-scrollbar-thumb{
     text-align:center;
    
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
-    /* background-size: cover;  utilizar cuando consiga una mejor imagen de fondo */
     
 
-    font-family: 'Lobster', cursive; /* Fuente Importada */
+    font-family: 'Lobster', cursive; 
     font-size: 75px;
     mask-border-width: 20px;
     border-radius: 20px;
@@ -158,7 +157,7 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    LINEAS HORIZONTALES    *********************/
-.linea_custom{  /* Horizontal Line */
+.linea_custom{ 
 
     width: 62% !important;
     height: 10px!important;
@@ -178,21 +177,21 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    FOTOS HOOVER    *********************/
 .grupo_fotos{
-    /*display:block;*/
-
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border-radius: 60px;
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     
     justify-items: center;
     align-items: center;
 }
-.grupo_fotos img{
-    padding-right: 70px;
-}
+
 
 /**************************************    FOTO DAMIAN    *********************/
-.presentacion_Damian{ /* ACOMODAR POSITIONS */
-    width: 100%;
+.presentacion_Damian{ 
+    
     margin:auto;
     
     font-size: 40px;
@@ -203,15 +202,15 @@ body::-webkit-scrollbar-thumb{
     float: left;
     position:relative;
     height: 640px;
-    width: 600px;
+    
     overflow: hidden;
     border-radius: 100px;
     margin-right: 10px;
 }
 .presentacion_Damian figure img{
     transition: all 700ms ease-out;
-    /* border-right: 6px solid lightblue;
-    border-top: 6px solid lightblue; */
+    height: 640px;
+    
 }
 .presentacion_Damian figure:hover > img{
     transform: scale(1.1);
@@ -238,6 +237,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 30px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -250,6 +250,7 @@ body::-webkit-scrollbar-thumb{
     margin-top: 40px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -262,7 +263,6 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    FOTO INVENTO    *********************/
 .presentacion_invento{
-    width: 100%;
     margin:auto;
     font-size: 40px;
     color:white;
@@ -280,8 +280,6 @@ body::-webkit-scrollbar-thumb{
 }
 .presentacion_invento figure img{
     transition: all 700ms ease-out;
-    /* border-right: 6px solid lightblue;
-    border-top: 6px solid lightblue; */
 }
 .presentacion_invento figure:hover > img{
     transform: scale(1.1);
@@ -308,6 +306,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 30px;
     
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -320,6 +319,7 @@ body::-webkit-scrollbar-thumb{
     margin-top: 40px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -334,7 +334,6 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    FOTO PABLO    *********************/
 .presentacion_Pablo{
-    width: 100%;
     margin:auto;
     
     font-size: 40px;
@@ -352,8 +351,7 @@ body::-webkit-scrollbar-thumb{
 }
 .presentacion_Pablo figure img{
     transition: all 700ms ease-out;
-    /* border-right: 6px solid lightblue;
-    border-top: 6px solid lightblue; */
+    height: 640px;
 }
 .presentacion_Pablo figure:hover > img{
     transform: scale(1.1);
@@ -380,6 +378,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 30px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -392,6 +391,7 @@ body::-webkit-scrollbar-thumb{
     margin-top: 40px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -407,7 +407,6 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    FOTO NICO    *********************/
 .presentacion_Nico{
-    width: 100%;
     margin:auto;
     
     font-size: 40px;
@@ -425,8 +424,6 @@ body::-webkit-scrollbar-thumb{
 }
 .presentacion_Nico figure img{
     transition: all 700ms ease-out;
-    /* border-right: 6px solid lightblue;
-    border-top: 6px solid lightblue; */
 }
 .presentacion_Nico figure:hover > img{
     transform: scale(1.1);
@@ -453,6 +450,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 30px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -465,6 +463,7 @@ body::-webkit-scrollbar-thumb{
     margin-top: 40px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -478,7 +477,6 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    FOTO LOLA    *********************/
 .presentacion_Lola{
-    width: 100%;
     margin:auto;
     
     font-size: 40px;
@@ -496,8 +494,6 @@ body::-webkit-scrollbar-thumb{
 }
 .presentacion_Lola figure img{
     transition: all 700ms ease-out;
-    /* border-right: 6px solid lightblue;
-    border-top: 6px solid lightblue; */
 }
 .presentacion_Lola figure:hover > img{
     transform: scale(1.1);
@@ -524,6 +520,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 30px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -536,6 +533,7 @@ body::-webkit-scrollbar-thumb{
     margin-top: 40px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -548,7 +546,6 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    FOTO JOAQUIN    *********************/
 .presentacion_joaquin{
-    width: 100%;
     margin:auto;
     
     font-size: 40px;
@@ -566,8 +563,6 @@ body::-webkit-scrollbar-thumb{
 }
 .presentacion_joaquin figure img{
     transition: all 700ms ease-out;
-    /* border-right: 6px solid lightblue;
-    border-top: 6px solid lightblue; */
 }
 .presentacion_joaquin figure:hover > img{
     transform: scale(1.1);
@@ -594,6 +589,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 30px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -606,6 +602,7 @@ body::-webkit-scrollbar-thumb{
     margin-top: 40px;
 
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
@@ -751,22 +748,6 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    RESPONSIVE MOBILE   *********************/
-/*
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
 @media screen and (max-width: 992px){
 
     
@@ -834,6 +815,7 @@ body::-webkit-scrollbar-thumb{
         font-size: 60px;
    
         -webkit-background-clip: text;
+        background-clip:text;
         -webkit-text-fill-color: transparent;
         background-image: url(../Recursos/FondoTitulo.jpg);
         background-attachment: fixed;
@@ -845,39 +827,24 @@ body::-webkit-scrollbar-thumb{
 }
 
 /*GALERIA*/
-@media screen and (max-width: 1300px){
+
+
+@media screen and (max-width: 1400px){
+    /*Botones Wsp/Top_Page Desactivados en Mobile*/
+    .Top_Button{
+        display: none;
+    }
+    .whatsapp{
+        display: none;
+    }
+
     .grupo_fotos{
-        /*display:block;*/
+        background: none;
+        box-shadow: none;
+
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-
-        justify-items: center;
-        align-items: center;
-
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        text-align: center;
-        
     }
     
-    .presentacion_Damian{
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        text-align: center;
-    }
 
-    .presentacion_Damian figure{
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        text-align: center;
-    }
-    .presentacion_Damian figure img{
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        text-align: center;
-    }
 }
