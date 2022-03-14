@@ -29,7 +29,10 @@
         <!--                   ^Link con BoostTrap CSS^                     -->
 
         <link rel="stylesheet" type="text/css" href="estilos_sobre_nosotros.css">
-        <!--                   ^Link con CSSS^                     --> 
+        <!--                   ^Link con CSSS^                     -->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!--                   ^Animate.css^                     -->
 
         <script src="https://kit.fontawesome.com/6a4f16e939.js" crossorigin="anonymous"></script>
         <!--                   ^Awesome Fonts^                     -->
@@ -41,7 +44,6 @@
    <body>
 
     <!--**********************    HEADER/CABECERA    ********************-->
-    <!--
     <section class="header">
 
         <div class="sub_header">
@@ -51,7 +53,25 @@
                 Style= "width: 80px; height: 80px;">
 
                 
-                <h1 class="titulo_header">Invento</h1>
+                <h1 class="titulo_header">
+                    <a href="#top_page">
+                    Invento
+                    <i class="fa fa-solid fa-bars icon_mobile_menu"></i>
+                    </a>
+
+                    <ul>
+                        <li> <a href="../index.html">Home </a> </li> 
+
+                        <li> <a href="../Servicio/servicio.html">Servicio </a> </li> 
+
+                        <li> <a href="../Nuestros Trabajos/nuestros_trabajos.html">Nuestros Trabajos </a> </li> 
+
+                        <li> <a href="#top_page">Sobre Nosotros </a> </li>
+
+                        <li> <a href="../Contactos/contacto.html">Contacto </a> </li>
+
+                    </ul>
+                </h1>
 
 
                 <ul class="menu_header">
@@ -61,21 +81,21 @@
 
                    <li> <a href="../Nuestros Trabajos/nuestros_trabajos.html">Nuestros Trabajos </a> </li> 
 
-                   <li> <a href="../Sobre Nosotros/sobre_nosotros.html">Sobre Nosotros </a> 
+                   <li> <a href="#top_page">Sobre Nosotros </a> 
                         <ul>
-                            <li> <a href="../Sobre Nosotros/sobre_nosotros.html">
+                            <li> <a href="#top_page">
                                 Damian Suner</a></li>
 
-                            <li><a href="../Sobre Nosotros/sobre_nosotros.html">
+                            <li><a href="#top_page">
                                 Pablo "Pepe" Paez</a></li>
 
-                            <li> <a href="../Sobre Nosotros/sobre_nosotros.html">
+                            <li> <a href="#top_page">
                                 Nicolas Dumont</a></li>
 
-                            <li> <a href="../Sobre Nosotros/sobre_nosotros.html">
+                            <li> <a href="#top_page">
                                 Lola Blazquez</a></li>
 
-                            <li> <a href="../Sobre Nosotros/sobre_nosotros.html">
+                            <li> <a href="#top_page">
                                 Joaquin Dumont</a></li>
                         </ul>              
                      </li> 
@@ -93,45 +113,6 @@
         </div>
 
     </section>
-    -->
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header_bt">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#top_page">Invento Solutions</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Servicio/servicio.html">Servicio</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Nuestros Trabajos/nuestros_trabajos.html">Nuestros Trabajos</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#top_page">Sobre Nosotros</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Contactos/contacto.html">Contacto</a>
-              </li>
-              
-
-            </ul>
-            <form class="d-flex">
-                <img src="../Recursos/inventoIcon.png" Style= "width: 80px; height: 80px;">
-            </form>
-          </div>
-        </div>
-      </nav>
 
 
     <!--**********************    TITULO/S DE PAGINA    ********************-->

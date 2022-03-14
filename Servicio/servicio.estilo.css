@@ -17,7 +17,7 @@ body{
     margin: 0;
     padding: 20;
 
-    background: url(../Recursos/azul.jpg);   
+    background: rgba(23,42,85,255);
     background-size: cover;
     background-position: center;
     font-family: 'Lobster', cursive;
@@ -69,6 +69,43 @@ body::-webkit-scrollbar-thumb{
     animation: fadeIn;
     animation-duration: 2s; 
 }
+.icon_mobile_menu{
+    font-size: 0;
+}
+.titulo_header ul{
+    position: absolute;
+    display: none;
+    min-width: 140px;
+    padding:10px 20px;
+    
+
+    text-align:center;
+    border-radius: 20px;
+}
+.titulo_header ul li{
+    display: block;
+    list-style:none;
+    
+    background: rgb(39, 70, 180);
+    margin-bottom: 10px;
+    
+    border-radius: 20px;
+}
+.titulo_header ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.titulo_header ul li:hover{
+    background: rgba( 23, 42, 110);
+}
+.titulo_header:hover > ul{
+    display: block;
+    background-color: rgb(34, 59, 151);
+    -webkit-text-fill-color:white;
+}
+
+
 .menu_header{
     float:right;
     padding: 0;
@@ -382,18 +419,44 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    RESPONSIVE MOBILE   *********************/
+
+/* HEADER RESPONSIVE: */
+
+/*Al llegar a 1420px se Re-centra el H1*/
+@media screen and (max-width: 1420px){
+    .titulo_header{
+    margin-left: 10%;
+    }
+}
+/*Al llegar a 1300px se esconde el H1*/
+@media screen and (max-width: 1300px){
+    .titulo_header{
+    display: none;
+    }
+}
+
+
+/*Al llegar a 992px se Genera la version MOBILE*/
 @media screen and (max-width: 992px){
 
-    /*Header*/
+    /*Header en H1*/
     .menu_header{
         display: none;
     }
-
     .header{
         width: 70%;
     }
+    .titulo_header{
+        display: inline-block;
+        margin-left: 20%;
+    }
+    /* Hago que aparezca el icono indicativo de menu Mobile */
+    .icon_mobile_menu{
+        font-size: 40px;
+    }
 
-   
+
+
 
     /* BANNER DE SKILLS*/
     .Skills{
@@ -453,31 +516,14 @@ body::-webkit-scrollbar-thumb{
 
 }
 
-@media screen and (min-width: 993px){
+/*Re-Centrar el H1 en menores resoluciones*/
+@media screen and (max-width: 740px){
     .titulo_header{
-        display: none;
+        margin-left: 10%;
     }
 }
-
-/*Recien en los 1156px el titulo del header pasa a ser visible */
-@media screen and (min-width: 1156px){
+@media screen and (max-width: 495px){
     .titulo_header{
-        position: absolute;
-        display: inline-block;
-    
         margin-left: 0%;
-    
-    
-        font-size: 60px;
-   
-        -webkit-background-clip: text;
-        background-clip:text;
-        -webkit-text-fill-color: transparent;
-        background-image: url(../Recursos/FondoTitulo.jpg);
-        background-attachment: fixed;
-
-
-        animation: fadeIn; 
-        animation-duration: 2s; 
     }
 }

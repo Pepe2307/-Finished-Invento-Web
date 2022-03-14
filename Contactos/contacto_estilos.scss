@@ -15,7 +15,7 @@ body{
 
     margin: 0;
     padding: 20;
-    background: url(../Recursos/azul.jpg);   
+    background: rgba(23,42,85,255);
     background-size: cover;
     background-position: center;
     font-family: 'Lobster', cursive;
@@ -142,7 +142,7 @@ body::-webkit-scrollbar-thumb{
     
 
     font-family: 'Lobster', cursive; 
-    font-size: 50px;
+    font-size: 75px;
     mask-border-width: 20px;
     border-radius: 20px;
     border-color: black;
@@ -150,8 +150,12 @@ body::-webkit-scrollbar-thumb{
 .titulo h1{
     padding-top: 90px;
     margin: auto;
+    font-size: 75px;
 }
-
+.titulo h4{
+    margin: 65px;
+    font-size: 50px;
+}
 
 
 /**************************************    LINEAS HORIZONTALES    *********************/

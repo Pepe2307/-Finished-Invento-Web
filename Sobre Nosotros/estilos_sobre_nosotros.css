@@ -6,10 +6,18 @@ html{
 }
 
 body{
-    
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+
+    align-items: center;
+    justify-content: space-between;
+    /* ^^^ Esto antes no estaba*/
+
     margin: 0;
     padding: 20;
-    background: url(../Recursos/azul.jpg);   
+
+    background: rgba(23,42,85,255);
     background-size: cover;
     background-position: center;
     font-family: 'Lobster', cursive;
@@ -39,14 +47,16 @@ body::-webkit-scrollbar-thumb{
     margin: 0 auto;
     background-color: rgb(34, 59, 151);
     border-radius: 35px;
+
+    animation: fadeInUp;
+    animation-duration: 2s; 
 }
 
-.titulo_header{  
+.titulo_header{
     position: absolute;
     display: inline-block;
-    margin: auto;
-    margin-left: 25%;
     
+    margin-left: 18%;    
     
     font-size: 60px;
    
@@ -55,13 +65,53 @@ body::-webkit-scrollbar-thumb{
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
+
+    animation: fadeIn;
+    animation-duration: 2s; 
 }
+.icon_mobile_menu{
+    font-size: 0;
+}
+.titulo_header ul{
+    position: absolute;
+    display: none;
+    min-width: 140px;
+    padding:10px 20px;
+    
+
+    text-align:center;
+    border-radius: 20px;
+}
+.titulo_header ul li{
+    display: block;
+    list-style:none;
+    
+    background: rgb(39, 70, 180);
+    margin-bottom: 10px;
+    
+    border-radius: 20px;
+}
+.titulo_header ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.titulo_header ul li:hover{
+    background: rgba( 23, 42, 110);
+}
+.titulo_header:hover > ul{
+    display: block;
+    background-color: rgb(34, 59, 151);
+    -webkit-text-fill-color:white;
+}
+
+
 .menu_header{
     float:right;
     padding: 0;
     height:100%;
     display: table;
-    margin-top: 16px; 
+    margin-top: 16px;
     font-size: 20px;
 }
 .menu_header li{
@@ -84,8 +134,8 @@ body::-webkit-scrollbar-thumb{
     background: rgba( 23, 42, 110);
 }
 
-
             /* SUBMENUS */
+
 .menu_header > li{
     float: left;
 }
@@ -117,16 +167,8 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(34, 59, 151);
 }
 
-#header_bt{
-    color: white !important;
-}
-.navbar{
-    background: rgb(40, 106, 192) !important;
-}
-.navbar-brand{
-    background: rgba(38, 58, 109, 0.5);
-    border-radius: 10%;
-}
+
+
 /**************************************    TITULO    *********************/
 .titulo{
     width: 100%;
@@ -190,8 +232,7 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    FOTO DAMIAN    *********************/
-.presentacion_Damian{ 
-    
+.presentacion_Damian{
     margin:auto;
     
     font-size: 40px;
@@ -202,7 +243,7 @@ body::-webkit-scrollbar-thumb{
     float: left;
     position:relative;
     height: 640px;
-    
+    width: 600px;
     overflow: hidden;
     border-radius: 100px;
     margin-right: 10px;
@@ -210,7 +251,6 @@ body::-webkit-scrollbar-thumb{
 .presentacion_Damian figure img{
     transition: all 700ms ease-out;
     height: 640px;
-    
 }
 .presentacion_Damian figure:hover > img{
     transform: scale(1.1);
@@ -748,21 +788,42 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    RESPONSIVE MOBILE   *********************/
+/* HEADER RESPONSIVE: */
+
+/*Al llegar a 1420px se Re-centra el H1*/
+@media screen and (max-width: 1420px){
+    .titulo_header{
+    margin-left: 10%;
+    }
+}
+/*Al llegar a 1300px se esconde el H1*/
+@media screen and (max-width: 1300px){
+    .titulo_header{
+    display: none;
+    }
+}
+
+
+/*Al llegar a 992px se Genera la version MOBILE*/
 @media screen and (max-width: 992px){
 
-    
-    /*Header*/
+    /*Header en H1*/
     .menu_header{
         display: none;
     }
-
     .header{
         width: 70%;
     }
-
     .titulo_header{
-        margin: auto;
+        display: inline-block;
+        margin-left: 20%;
     }
+    /* Hago que aparezca el icono indicativo de menu Mobile */
+    .icon_mobile_menu{
+        font-size: 40px;
+    }
+
+
 
     /* Footer */
     .footer{
@@ -798,36 +859,32 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-/*TITULO HEADER*/
-@media screen and (min-width: 993px){
+/*Re-Centrar el H1 en menores resoluciones*/
+@media screen and (max-width: 740px){
     .titulo_header{
-        display: none;
+        margin-left: 10%;
     }
 }
-@media screen and (min-width: 1156px){
+@media screen and (max-width: 495px){
     .titulo_header{
-        position: absolute;
-        display: inline-block;
-    
         margin-left: 0%;
-    
-    
-        font-size: 60px;
-   
-        -webkit-background-clip: text;
-        background-clip:text;
-        -webkit-text-fill-color: transparent;
-        background-image: url(../Recursos/FondoTitulo.jpg);
-        background-attachment: fixed;
-
-
-        animation: fadeIn; 
-        animation-duration: 2s; 
     }
 }
+
+
+
 
 /*GALERIA*/
 
+@media screen and (max-width: 1700px){
+    .grupo_fotos{
+        background: none;
+        box-shadow: none;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media screen and (max-width: 1400px){
     /*Botones Wsp/Top_Page Desactivados en Mobile*/
@@ -845,6 +902,5 @@ body::-webkit-scrollbar-thumb{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
-    
-
 }
+

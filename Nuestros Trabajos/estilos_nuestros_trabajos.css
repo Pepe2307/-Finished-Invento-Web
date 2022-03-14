@@ -15,7 +15,7 @@ body{ /*CAMBIADO */
     margin: 0;
     padding: 20;
     
-    background: url(../Recursos/azul.jpg);   
+    background: rgba(23,42,85,255);
     background-size: cover;
     background-position: center;
     font-family: 'Lobster', cursive;
@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    HEADER/CABECERA    *********************/
-.header{ 
+.header{
     position: fixed;
     width: 85%;
     height: 80px;
@@ -48,16 +48,16 @@ body::-webkit-scrollbar-thumb{
     margin: 0 auto;
     background-color: rgb(34, 59, 151);
     border-radius: 35px;
+
+    animation: fadeInUp;
+    animation-duration: 2s; 
 }
 
-
-.titulo_header{ 
+.titulo_header{
     position: absolute;
     display: inline-block;
-    margin: auto;
-
-    margin-left: 18%;
     
+    margin-left: 18%;    
     
     font-size: 60px;
    
@@ -66,13 +66,53 @@ body::-webkit-scrollbar-thumb{
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
+
+    animation: fadeIn;
+    animation-duration: 2s; 
 }
+.icon_mobile_menu{
+    font-size: 0;
+}
+.titulo_header ul{
+    position: absolute;
+    display: none;
+    min-width: 140px;
+    padding:10px 20px;
+    
+
+    text-align:center;
+    border-radius: 20px;
+}
+.titulo_header ul li{
+    display: block;
+    list-style:none;
+    
+    background: rgb(39, 70, 180);
+    margin-bottom: 10px;
+    
+    border-radius: 20px;
+}
+.titulo_header ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.titulo_header ul li:hover{
+    background: rgba( 23, 42, 110);
+}
+.titulo_header:hover > ul{
+    display: block;
+    background-color: rgb(34, 59, 151);
+    -webkit-text-fill-color:white;
+}
+
+
 .menu_header{
     float:right;
     padding: 0;
     height:100%;
     display: table;
-    margin-top: 16px; 
+    margin-top: 16px;
     font-size: 20px;
 }
 .menu_header li{
@@ -95,8 +135,8 @@ body::-webkit-scrollbar-thumb{
     background: rgba( 23, 42, 110);
 }
 
-
             /* SUBMENUS */
+
 .menu_header > li{
     float: left;
 }
@@ -493,17 +533,40 @@ body::-webkit-scrollbar-thumb{
 }
 
 /**************************************    RESPONSIVE MOBILE   *********************/
+/* HEADER RESPONSIVE: */
+
+/*Al llegar a 1420px se Re-centra el H1*/
+@media screen and (max-width: 1420px){
+    .titulo_header{
+    margin-left: 10%;
+    }
+}
+/*Al llegar a 1300px se esconde el H1*/
+@media screen and (max-width: 1300px){
+    .titulo_header{
+    display: none;
+    }
+}
+
+
+/*Al llegar a 992px se Genera la version MOBILE*/
 @media screen and (max-width: 992px){
 
-    /*HEADER*/
+    /*Header en H1*/
     .menu_header{
         display: none;
     }
-
     .header{
         width: 70%;
     }
-
+    .titulo_header{
+        display: inline-block;
+        margin-left: 20%;
+    }
+    /* Hago que aparezca el icono indicativo de menu Mobile */
+    .icon_mobile_menu{
+        font-size: 40px;
+    }
     /*GALERIA*/
     .galeria_imagenes{
         display: grid;
@@ -583,11 +646,21 @@ body::-webkit-scrollbar-thumb{
 }
 
 
+/*Re-Centrar el H1 en menores resoluciones*/
+@media screen and (max-width: 740px){
+    .titulo_header{
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width: 495px){
+    .titulo_header{
+        margin-left: 0%;
+    }
+}
 
 
 
-
-@media screen and (min-width: 993px){
+/* @media screen and (min-width: 993px){
     .titulo_header{
         display: none;
     }
@@ -612,4 +685,4 @@ body::-webkit-scrollbar-thumb{
         animation: fadeIn; 
         animation-duration: 2s; 
     }
-}
+} */
