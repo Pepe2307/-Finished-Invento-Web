@@ -859,10 +859,35 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-/*Re-Centrar el H1 en menores resoluciones*/
+/*Re-Centrar el H1 en menores resoluciones y ajustar presentaciones*/
 @media screen and (max-width: 740px){
     .titulo_header{
         margin-left: 10%;
+    }
+
+    .presentacion_Damian figure{
+        height: 640px;
+        width: 500px;
+    }
+    .presentacion_invento figure{
+        height: 640px;
+        width: 500px;
+    }
+    .presentacion_Pablo figure{
+        height: 640px;
+        width: 500px;
+    }
+    .presentacion_Nico figure{
+        height: 640px;
+        width: 500px;
+    }
+    .presentacion_Lola figure{
+        height: 640px;
+        width: 500px;
+    }
+    .presentacion_joaquin figure{
+        height: 640px;
+        width: 500px;
     }
 }
 @media screen and (max-width: 495px){

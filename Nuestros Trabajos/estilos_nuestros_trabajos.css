@@ -333,8 +333,8 @@ body::-webkit-scrollbar-thumb{
     padding: 10px;
     background:transparent;
     
-    width: 600px;
-    height: 600px;
+    width: 580px;
+    height: 580px;
     transition: 800ms;
 }
 
@@ -632,7 +632,7 @@ body::-webkit-scrollbar-thumb{
 
 }
 
-@media screen and (min-width: 1100px) and (max-width: 1400px){
+@media screen and (min-width: 1100px) and (max-width: 1700px){
     /*Galeria de Imagenes*/
     .galeria_imagenes{
        display: grid;
@@ -646,43 +646,20 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-/*Re-Centrar el H1 en menores resoluciones*/
+/*Re-Centrar el H1 en menores resoluciones y reacomodar galeria*/
 @media screen and (max-width: 740px){
     .titulo_header{
         margin-left: 10%;
     }
+
+    .galeria_imagenes img{
+        width: 400px;
+        height: 400px;
+    }
+    
 }
 @media screen and (max-width: 495px){
     .titulo_header{
         margin-left: 0%;
     }
 }
-
-
-
-/* @media screen and (min-width: 993px){
-    .titulo_header{
-        display: none;
-    }
-}
-@media screen and (min-width: 1156px){
-    .titulo_header{
-        position: absolute;
-        display: inline-block;
-    
-        margin-left: 0%;
-    
-    
-        font-size: 60px;
-   
-        -webkit-background-clip: text;
-        background-clip:text;
-        -webkit-text-fill-color: transparent;
-        background-image: url(../Recursos/FondoTitulo.jpg);
-        background-attachment: fixed;
-
-
-        animation: fadeIn; 
-        animation-duration: 2s; 
-    }
-} */

@@ -435,8 +435,24 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
+/**************************************    Banner Invento Shop    *********************/
+/* .card{
+    width: 80%;
+    height: 300px;
+}
+ */
+.card{
+    border-radius: 20px;
+    background: rgb(44, 104, 214);
+    color: white;
+    height: 400px;
+}
+ .boton_shop {
+    /* position: relative; 
+    left: 50%;
+    transform: translateX(-50%); */
+    margin:auto;
+  }
 
 /**************************************    Boton de inicio    *********************/
 .boton_top{
@@ -646,8 +662,8 @@ body::-webkit-scrollbar-thumb{
     }
 
     .galeria_imagenes img{
-        width: 500px;
-        height: 500px;
+        width: 550px;
+        height: 550px;
     }
 
     /*FOOTER*/
@@ -693,19 +709,31 @@ body::-webkit-scrollbar-thumb{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .galeria_imagenes img{
-        width: 500px;
-        height: 500px;
-    }
-    
 }
 
 
 
-/*Re-Centrar el H1 en menores resoluciones*/
+/*Re-Centrar el H1 en menores resoluciones y reacomodar galeria/prsentacion*/
 @media screen and (max-width: 740px){
     .titulo_header{
         margin-left: 10%;
+    }
+
+    .galeria_imagenes img{
+        width: 400px;
+        height: 400px;
+    }
+    .biografia img{
+        margin-right: 0;
+        box-shadow: none;
+    }
+    .texto_bio{
+        float: left;
+    }
+
+    .presentacion figure{
+        height: 500px;
+        width: 500px;        
     }
 }
 @media screen and (max-width: 495px){
@@ -715,22 +743,14 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-/*Ajustar Seccion de biografia*/
-@media screen and (max-width: 760px){
-    .biografia img{
-        margin-right: 0;
-        box-shadow: none;
-    }
-    .texto_bio{
-        float: left;
-    }
-}
-
 /*Ajustar Galeria*/
 @media screen and (max-width: 600px) {
     .galeria_imagenes {
       flex: 100%;
       max-width: 100%;
+    }
+    .card{
+        height: 500px;
     }
   }
 
