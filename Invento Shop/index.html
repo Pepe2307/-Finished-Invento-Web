@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <!--------------------------------------------HEAD------------------------------------------->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Set up utf 8   -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mejor compativilidad global -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Mejor visibilidad Mobile -->
+
+    <title>Pagina Ventas Invento</title>
+    <!--Set up titulo de pestaña-->
+
+    <link rel="icon" href="assets/inventoIcon.png" />
+    <!--Set up icono de pestaña-->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"/>
+    <!--                   ^Boostrap^                     -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--                   ^Toastify^                     -->
+
+    <link rel="stylesheet" type="text/css" href="styles/estilo_proyecto_JS.css" />
+    <!--                   ^Link con CSSS^                     -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--                   ^Animate.css^                     -->
+
+    <script src="https://kit.fontawesome.com/6a4f16e939.js" crossorigin="anonymous"></script>
+    <!--                   ^Awesome Fonts^                     -->
+  </head>
+
+
+
+
+  <!--------------------------------------------BODY------------------------------------------->
+  <body>
+
+    <!--**********************    HEADER/CABECERA    ********************-->
+    <section class="header">
+
+      <div class="sub_header">
+
+          <div class="logo">
+              <img src="../Recursos/inventoIcon.png"
+              Style= "width: 80px; height: 80px;">
+
+              
+              <h1 class="titulo_header">
+                  <a href="#Titulo_carrito">
+                  Invento Shop
+                  <i class="fa fa-solid fa-bars icon_mobile_menu"></i>
+                  </a>
+
+                  <ul>
+                      <li> <a href="#">Carrito de Compras</a> </li> 
+                      
+                      <li> <a href="#footer">Ventas</a> </li> 
+
+                      <li> <a href="../Contactos/contacto.html">Contacto</a> </li>
+
+                  </ul>
+              </h1>
+
+
+              <ul class="menu_header">
+                 <li> <a href="../index.html">Invento Home </a> </li> 
+
+                 <li> <a href="#">Carrito de Compras</a> </li> 
+
+                 <li> <a href="#footer">Ventas</a> 
+                      <ul>
+                          <li> <a href="#footer">
+                              Computacion</a></li>
+
+                          <li><a href="#boton_1">
+                              Mangas</a></li>
+
+                          <li> <a href="#boton_9">
+                              Libros</a></li>
+
+                      </ul>              
+                   </li> 
+
+                 <li> <a href="../Contactos/contacto.html">Contacto </a> </li>
+
+                 <li> <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fab fa-instagram"></i></a></li>
+
+                 <li> <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fab fa-facebook-square"></i></a></li>
+              </ul>
+          </div>
+
+      </div>
+
+  </section>
+
+
+    <!--------------------------------CARRITO DE COMPRAS------------------------------->
+
+            <!--    Tabla de items    -->
+    <div class="container">
+      <h4 class="titular" style="text-align: center;" id="Titulo_carrito">
+        <i class="fas fa-shopping-cart"></i>
+        Carrito de compras:
+      </h4>
+      <table class="table" id="tabla_items" style="font-size: 30px;">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items"></tbody>
+        <tfoot>
+          <tr id="footer">
+            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+          </tr>
+        </tfoot>
+      </table>
+
+            <!--    Lista de Compra    -->
+      <h4 class="titular" style="text-align: center;">Objetos para comprar:</h4>
+      <div class="row" id="cards"></div>
+
+    </div>
+
+
+    <!--   TEMPLATES   -->
+
+    <!--    Lista de Compra    --> 
+    <template id="template-card">
+      <div class="col-12 mb-2 col-md-6">
+        <div class="card">
+          <img src="" alt="" class="card-img-top"
+          style="height: 400px;" width="200px">
+          <div class="card-body text-center">
+            <h5>Titulo</h5>
+            <p>precio</p>
+            <button class="btn btn-dark">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    
+    <!--    TABLA -Carrito    --> 
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>Objeto</td>
+        <td>1</td>
+        <td>
+          <button class="btn btn-info btn-sm">+</button>
+          <button class="btn btn-danger btn-sm">-</button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+
+
+    <!--    TABLA -Footer    -->  
+    <template id="template-footer">
+      <th scope="row" colspan="2" id="text_footer">Total productos</th>
+      <td>10</td>
+      <td>
+        <button class="btn btn-danger btn-sm" id="vaciar-carrito">Vaciar Todo</button>
+      </td>
+      <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+
+
+
+
+
+
+
+    <!--------------------------------CALCULADORA DE PRECIOS------------------------------->
+
+    <!---------Inputs---------->
+    <div class="ventas">
+      <div class="ventas_inputs">
+        <h1>Pagina de ventas Pablo Paez</h1>
+        <form>
+          <div id="Producto_input">
+            <p>Tipo de Producto</p>
+            <select id="Tipo_Producto">
+              <option value="">Productos</option>
+              <option value="Libro">Libro</option>
+              <option value="Manga">Manga</option>
+              <option value="Computadora">PC</option>
+            </select>
+
+          </div>
+
+          <div id="tipo">
+            <p>Nombre de objeto</p>
+            <input type="text" id="tipo_objeto" />
+          </div>
+
+          <div id="Precio_input">
+            <p>Precio</p>
+            <input type="text" id="Precio" />
+          </div>
+
+          <div id="Cantidad_input">
+            <p>Cantidad</p>
+            <input type="text" id="Cantidad" />
+          </div>
+        </form>
+
+        <button type="button" name="button" id="button" onclick="agregar(); agregar_array()">
+          Agregar al carrito
+        </button>
+      </div>
+
+      <br />
+
+      <!-- Tabla de Outputs -->
+      <div class="tabla">
+        <table id="info">
+          <thead>
+            <tr>
+              <th>Productos:</th>
+              <th>Precios:</th>
+              <th>Cantidad:</th>
+              <!-- <th>SubTotal</th> -->
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!---------Outputs de precios---------->
+      <div id="Sub_tabla">
+        <div>
+          <p>Subtotal:</p>
+          <input type="text" id="SubTotal" />
+        </div>
+
+        <div>
+          <p>Impuestos</p>
+          <input type="text" id="Impuesto" />
+        </div>
+
+        <div>
+          <p>Total del utlimo objeto agregado:</p>
+          <input type="text" id="Total_Ultimo" />
+          <br />
+        </div>
+
+        <div>
+          <p>Total:</p>
+          <input type="text" id="Total" />
+          <br />
+        </div>
+
+        
+      </div>
+
+      <!---------Simulador de cuotas---------->
+      <div class="simulador_cuotas">
+        <h1>Calculadora de Cuotas</h1>
+        <div id="precio_simulador">
+          <p>Precio del producto</p>
+          <input type="text" id="precio_cuotas_simulador" value="Ingrese Precio" />
+        </div>
+
+        <div id="cuotas_simulador">
+          <p>Cantidad de cuotas</p>
+          <input type="text" id="cantida_cuotas_simulador" value="Ingrese Cuotas" />
+        </div>
+
+        <div id="precio_final_simulador">
+          <p>Precio final en cuotas</p>
+          <input type="text" id="precio_por_cuota" />
+        </div>
+
+        <h4>Presione "Enter" una vez ingresados los valores de precio y cuotas
+        <i class="fas fa-shopping-cart"></i>
+        </h4>
+      </div>
+    </div>
+
+
+
+
+<!--------------------------------BOTONES FIXED A INICIO/WHATSAPP------------------------------->
+
+        <!--Boton a inicio-->
+        <div class="Top_Button">
+            
+          <a a href="#" class="boton_top">
+              <i class="fas fa-angle-up"></i> <!-- Awesome  Fonts Arrow-->
+          </a>
+
+      </div>
+
+
+      <!--Boton WhatsApp-->
+      <div class="whatsapp">
+
+          <a href="https://whatsapp.com"
+          class="boton_whatsapp" target="_blank">
+              <i class="fab fa-whatsapp"></i> <!-- Awesome  Fonts WhatsApp-->
+          </a>
+
+      </div>
+
+
+
+
+
+<!--------------------------------FOOTER------------------------------->
+      <section class="footer" id="footer_id">
+
+          <div class="footer_contacto">     
+              <h1>
+                  Formas de Contacto
+                  <i class="fas fa-chart-line"></i>
+              </h1>
+
+              <p>
+                  Direccion: calle falsa 123<br>
+                  Datos de contacto: horarios de atencion<br> 
+                  Numero de telefono: 123456789<br>
+                  Redes Sociales: @Red Social 1 / @Red Social 2<br>
+                  Links a redes a continuacion:
+              </p>
+          </div>
+
+
+          <div class="iconos_redes">
+              <ul>
+                  <li> <a href="https://www.whatsapp.com/" target="_blank">
+                  <i class="fab fa-whatsapp"></i>         </a>  </li>
+                  
+
+                  <li> <a href="https://www.facebook.com/" target="_blank"> 
+                  <i class="fab fa-instagram"></i>        </a>  </li>
+                  
+
+                  <li> <a href="https://www.instagram.com/" target="_blank"> 
+                  <i class="fab fa-facebook-square"></i>  </a>  </li>
+              </ul>
+          </div>
+          
+
+          <div class="mapa">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.
+              418332672874!2d-58.71404978477194!3d-34.54296208047529!2m3!1f0!2f0!3f0!3
+              m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd0d7e07c78b%3A0xf879e262f796e21a
+              !2sPlaza%20de%20San%20Miguel!5e0!3m2!1ses!2sar!4v1642229280904!5m2!1ses!2sar" 
+              
+              width="600" height="397" style="border:0;" 
+              allowfullscreen="" loading="lazy"></iframe>
+              
+          </div>
+
+          
+      </section>
+
+
+
+
+
+    <!--------------------------------Script de JS y BT------------------------------->
+    <script src="js/app.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="js/toast.js"></script>
+  </body>
+</html>

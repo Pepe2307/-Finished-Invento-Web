@@ -1,0 +1,74 @@
+[
+    {
+      "precio": 70000,
+      "id": 1,
+      "title": "Combo PC Escritorio 1",
+      "thumbnailUrl": "https://picsum.photos/id/0/600",
+      "picture": "./assets/Galeria/pc.jpg",
+      "id_2": "boton_1"
+    },
+    {
+      "precio": 50000,
+      "id": 2,
+      "title": "Combo PC Escritorio 2",
+      "thumbnailUrl": "pc.jpg",
+      "picture": "./assets/Galeria/pc_2.jpg"
+    },
+    {
+      "precio": 30000,
+      "id": 3,
+      "title": "Notebook",
+      "thumbnailUrl": "pc.jpg",
+      "picture": "./assets/Galeria/notebook.jpg"
+    },
+    {
+      "precio": 1500,
+      "id": 4,
+      "title": "Manga Dr.Stone",
+      "thumbnailUrl": "https://picsum.photos/id/30/600",
+      "picture": "./assets/Galeria/drstone.jpg"
+    },
+    {
+      "precio": 1000,
+      "id": 5,
+      "title": "Manga ChainsawMan",
+      "thumbnailUrl": "https://picsum.photos/id/40/600",
+      "picture": "./assets/Galeria/chainsawman.jpg",
+      "id_2": "boton_9"
+    },
+    {
+      "precio": 900,
+      "id": 6,
+      "title": "Manga The Promised Neverland",
+      "thumbnailUrl": "https://picsum.photos/id/50/600",
+      "picture": "./assets/Galeria/promised_neverland.jpg"
+    },
+    {
+      "precio": 700,
+      "id": 6,
+      "title": "Libro La divina comedia",
+      "thumbnailUrl": "https://picsum.photos/id/50/600",
+      "picture": "./assets/Galeria/divina_comedia.jpg"
+    },
+    {
+      "precio": 600,
+      "id": 6,
+      "title": "Libro Cosmo - Carl Sagan",
+      "thumbnailUrl": "https://picsum.photos/id/50/600",
+      "picture": "./assets/Galeria/cosmo.jpg"
+    },
+    {
+      "precio": 6000,
+      "id": 6,
+      "title": "Coleccion de libros Harry Potter",
+      "thumbnailUrl": "https://picsum.photos/id/50/600",
+      "picture": "./assets/Galeria/harry_potter.jpg"
+    },
+    {
+      "precio": 900,
+      "id": 6,
+      "title": "El Codigo Da Vinci",
+      "thumbnailUrl": "https://picsum.photos/id/50/600",
+      "picture": "./assets/Galeria/Codigo_Davinci.jpg"
+    }
+]
