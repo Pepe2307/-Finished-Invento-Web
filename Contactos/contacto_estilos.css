@@ -39,135 +39,134 @@ body::-webkit-scrollbar-thumb {
 }
 
 /**************************************    HEADER/CABECERA    *********************/
-.header{
+.header {
   position: fixed;
   width: 85%;
   height: 80px;
   display: block;
   background-color: transparent;
-  z-index:1000;
-
+  z-index: 1000;
   margin: 0 auto;
-  background-color: rgb(34, 59, 151);
+  background-color: #223b97;
   border-radius: 35px;
-
-  animation: fadeInUp;
-  animation-duration: 2s; 
+  -webkit-animation: fadeInUp;
+          animation: fadeInUp;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
-.titulo_header{
+.titulo_header {
   position: absolute;
   display: inline-block;
-  
-  margin-left: 18%;    
-  
+  margin-left: 18%;
   font-size: 60px;
- 
   -webkit-background-clip: text;
-  background-clip:text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: url(../Recursos/FondoTitulo.jpg);
   background-attachment: fixed;
-
-  animation: fadeIn;
-  animation-duration: 2s; 
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
-.icon_mobile_menu{
+
+.icon_mobile_menu {
   font-size: 0;
 }
-.titulo_header ul{
+
+.titulo_header ul {
   position: absolute;
   display: none;
   min-width: 140px;
-  padding:10px 20px;
-  
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 20px;
+}
 
-  text-align:center;
-  border-radius: 20px;
-}
-.titulo_header ul li{
+.titulo_header ul li {
   display: block;
-  list-style:none;
-  
-  background: rgb(39, 70, 180);
+  list-style: none;
+  background: #2746b4;
   margin-bottom: 10px;
-  
   border-radius: 20px;
 }
-.titulo_header ul li a{
+
+.titulo_header ul li a {
   text-decoration: none;
   color: white;
-  
 }
-.titulo_header ul li:hover{
-  background: rgba( 23, 42, 110);
+
+.titulo_header ul li:hover {
+  background: #172a6e;
 }
-.titulo_header:hover > ul{
+
+.titulo_header:hover > ul {
   display: block;
-  background-color: rgb(34, 59, 151);
-  -webkit-text-fill-color:white;
+  background-color: #223b97;
+  -webkit-text-fill-color: white;
 }
 
-
-.menu_header{
-  float:right;
+.menu_header {
+  float: right;
   padding: 0;
-  height:100%;
+  height: 100%;
   display: table;
   margin-top: 16px;
   font-size: 20px;
 }
-.menu_header li{
+
+.menu_header li {
   text-decoration: none;
   display: inline-block;
-  text-align:center;
-  color:white;
-  list-style:none;
+  text-align: center;
+  color: white;
+  list-style: none;
 }
-.menu_header li a{
+
+.menu_header li a {
   display: inline-block;
-  padding:10px 20px;
-  
-  text-align:center;
+  padding: 10px 20px;
+  text-align: center;
   border-radius: 20px;
   color: white;
   text-decoration: none;
 }
-.menu_header li a:hover{
-  background: rgba( 23, 42, 110);
+
+.menu_header li a:hover {
+  background: #172a6e;
 }
 
-          /* SUBMENUS */
-
-.menu_header > li{
+/* SUBMENUS */
+.menu_header > li {
   float: left;
 }
-.menu_header li ul{
+
+.menu_header li ul {
   position: absolute;
   top: 65px;
   display: none;
-
-  
   min-width: 140px;
-  padding:10px 20px;
-  
-  text-align:center;
+  padding: 10px 20px;
+  text-align: center;
   border-radius: 20px;
   color: white;
   text-decoration: none;
 }
-.menu_header li ul li{
+
+.menu_header li ul li {
   display: block;
-  
   padding: 5px;
   border-radius: 20px;
 }
-.menu_header li ul li:hover{
-  background: rgba( 23, 42, 110);
+
+.menu_header li ul li:hover {
+  background: #172a6e;
 }
-.menu_header li:hover > ul{
+
+.menu_header li:hover > ul {
   display: block;
-  background-color: rgb(34, 59, 151);
+  background-color: #223b97;
 }
 
 /**************************************    TITULO    *********************/
@@ -232,7 +231,7 @@ body::-webkit-scrollbar-thumb {
   background-image: url(../Recursos/fondo.jpg);
   background-attachment: fixed;
   border-radius: 20px;
-  width: 100%;
+  width: 70%;
   top: 45%;
 }
 
@@ -330,7 +329,7 @@ body::-webkit-scrollbar-thumb {
           align-items: center;
   width: 100%;
   height: 400px;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
   border-top: 6px solid;
   border-color: #172a6e;
@@ -426,57 +425,44 @@ body::-webkit-scrollbar-thumb {
 
 /**************************************    RESPONSIVE MOBILE   *********************/
 /* HEADER RESPONSIVE: */
-
 /*Al llegar a 1420px se Re-centra el H1*/
-@media screen and (max-width: 1420px){
-  .titulo_header{
-  margin-left: 10%;
-  }
-}
-/*Al llegar a 1300px se esconde el H1*/
-@media screen and (max-width: 1300px){
-  .titulo_header{
-  display: none;
+@media screen and (max-width: 1420px) {
+  .titulo_header {
+    margin-left: 10%;
   }
 }
 
+/*Al llegar a 1300px se esconde el H1*/
+@media screen and (max-width: 1300px) {
+  .titulo_header {
+    display: none;
+  }
+}
 
 /*Al llegar a 992px se Genera la version MOBILE*/
-@media screen and (max-width: 992px){
-
+@media screen and (max-width: 992px) {
   /*Header en H1*/
-  .menu_header{
-      display: none;
+  .menu_header {
+    display: none;
   }
-  .header{
-      width: 70%;
+  .header {
+    width: 70%;
   }
-  .titulo_header{
-      display: inline-block;
-      margin-left: 20%;
+  .titulo_header {
+    display: inline-block;
+    margin-left: 20%;
   }
   /* Hago que aparezca el icono indicativo de menu Mobile */
-  .icon_mobile_menu{
-      font-size: 40px;
+  .icon_mobile_menu {
+    font-size: 40px;
   }
-
-
-  .Skills {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-  }
+  /* .Skills{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items:center;
+        width: 100%;
+    } */
   /*FOOTER*/
   .footer, .redes_sass {
     -webkit-box-flex: 1;
@@ -551,15 +537,58 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-/*Re-Centrar el H1 en menores resoluciones*/
-@media screen and (max-width: 740px){
-    .titulo_header{
-        margin-left: 10%;
-    }
+@media screen and (min-width: 993px) {
+  .titulo_header {
+    display: none;
+  }
 }
-@media screen and (max-width: 495px){
-    .titulo_header{
-        margin-left: 0%;
-    }
+
+@media screen and (min-width: 1156px) {
+  .titulo_header {
+    position: absolute;
+    display: inline-block;
+    margin-left: 0%;
+    font-size: 60px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(../Recursos/FondoTitulo.jpg);
+    background-attachment: fixed;
+    -webkit-animation: fadeIn;
+            animation: fadeIn;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+  }
+}
+
+/*Re-Centrar el H1 en menores resoluciones*/
+@media screen and (max-width: 740px) {
+  .titulo_header {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+  }
+  .titulo_header {
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .titulo_header {
+    margin-left: 0;
+    margin-top: 5px;
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .titulo_header {
+    margin-top: 15px;
+    font-size: 40px;
+  }
 }
 /*# sourceMappingURL=contacto_estilos.css.map */

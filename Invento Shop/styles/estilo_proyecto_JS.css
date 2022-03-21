@@ -1,18 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 /*Fuente de Google Fonts Importada a CSS*/
-
 html{
     scroll-behavior: smooth;  /*scroll de vinculos suavizado*/
 }
-
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 2vh;
-
-
     margin: 0;
 
     background: rgba(23,42,85,255);   
@@ -21,7 +17,6 @@ body{
     font-family: 'Lobster', cursive;
     color: white;
 }
-
 body::-webkit-scrollbar{
     width: 10px;
     background:rgba( 23, 42, 90);
@@ -30,7 +25,6 @@ body::-webkit-scrollbar-thumb{
     background:rgba(75, 97, 223, 0.801);
     border-radius:10pt;
 }
-
 
 /**************************************    HEADER/CABECERA    *********************/
 .header{
@@ -74,7 +68,6 @@ body::-webkit-scrollbar-thumb{
     display: none;
     min-width: 140px;
     padding:10px 20px;
-    
 
     text-align:center;
     border-radius: 20px;
@@ -91,7 +84,6 @@ body::-webkit-scrollbar-thumb{
 .titulo_header ul li a{
     text-decoration: none;
     color: white;
-    
 }
 .titulo_header ul li:hover{
     background: rgba( 23, 42, 110);
@@ -101,7 +93,6 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(34, 59, 151);
     -webkit-text-fill-color:white;
 }
-
 
 .menu_header{
     float:right;
@@ -141,7 +132,6 @@ body::-webkit-scrollbar-thumb{
     top: 65px;
     display: none;
 
-    
     min-width: 140px;
     padding:10px 20px;
     
@@ -163,8 +153,6 @@ body::-webkit-scrollbar-thumb{
     display: block;
     background-color: rgb(34, 59, 151);
 }
-
-
 
 
 /*TOASTIFY */
@@ -207,11 +195,6 @@ body::-webkit-scrollbar-thumb{
   }
 
 
-
-
-
-
-
 /**************************************    TIENDA / SHOP    *********************/
 .container{
     color: white !important;
@@ -243,8 +226,6 @@ body::-webkit-scrollbar-thumb{
     border: 20px;
     border-radius: 20px;
 }
-
-
 .btn-dark{
     font-size: 30px;
     padding-top: 2vh;
@@ -254,10 +235,8 @@ body::-webkit-scrollbar-thumb{
     border-radius: 80px;
     border: 0.2rem solid white;
 
-
     background: rgba( 23, 42, 110);
 }
-
 .btn-dark:hover{
     background: rgb(34, 61, 160);
     
@@ -277,7 +256,6 @@ body::-webkit-scrollbar-thumb{
     padding:10px;
     transition: 800ms;
 }
-
 .card img:hover{
     transform: scale(1.05);
 }
@@ -299,11 +277,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
-
-
-
 /**************************************    CALCULADORA DE VENTAS   *********************/
 .ventas{
     display: flex;
@@ -322,7 +295,6 @@ body::-webkit-scrollbar-thumb{
 .ventas p{
     font-size: 2.5vh;
 }
-
 .ventas_inputs{
     flex:1;
 }
@@ -346,18 +318,12 @@ body::-webkit-scrollbar-thumb{
     margin-top: 5vh;
     font-size: 10vh;
 }
-
 .simulador_cuotas{
     flex: 1;
     margin-left: 3%;
     font-size: 20px;
     color: white;
 }
-
-
-
-
-
 
 
 /**************************************    Boton de inicio    *********************/
@@ -372,7 +338,6 @@ body::-webkit-scrollbar-thumb{
     width: 55px;
     height: 55px;
     line-height: 55px;
-    
     
     border-radius: 50px;
     background:rgb(156, 156, 156);
@@ -391,7 +356,6 @@ body::-webkit-scrollbar-thumb{
 .boton_whatsapp{
     position: fixed;
 
-    
     bottom: 0;
     right: 0;
 
@@ -400,8 +364,6 @@ body::-webkit-scrollbar-thumb{
     width: 55px;
     height: 55px;
     line-height: 55px;
-    
-
 
     border-radius: 50px;
     background: green;
@@ -416,9 +378,6 @@ body::-webkit-scrollbar-thumb{
     color: green;
     background: white;
 }
-
-
-
 
 
 /**************************************    FOOTER   *********************/
@@ -442,11 +401,8 @@ body::-webkit-scrollbar-thumb{
 
     background:rgb(33, 60, 122);
     background-attachment: fixed;
-
     box-shadow: 0 0 30px 25px rgba(0,0,0,0.50);
-
 }
-
 
 .footer .footer_contacto{
     margin-left: auto;
@@ -471,7 +427,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 .footer .iconos_redes ul{
-    
     font-size: 40px;
     margin: 0;
     padding: 0;
@@ -483,25 +438,14 @@ body::-webkit-scrollbar-thumb{
     text-align: left;
     font-size: 70px;
 }
-
 .footer .iconos_redes li a{
     width: 50px;
     height: 50px;
     color: white;
 }
-
 .footer .mapa{
     margin-left: auto;
 }
-
-
-
-
-
-
-
-
-
 
 
 /**************************************    RESPONSIVE MOBILE   *********************/
@@ -541,12 +485,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
-
-
 @media screen and (max-width: 1080px){
-    
 
     /*FOOTER*/
     .footer{
@@ -605,3 +544,26 @@ body::-webkit-scrollbar-thumb{
         margin-left: 0;
     }
 }
+
+@media screen and (max-width: 640px){
+    .header{
+        width: 100%;
+    }
+    .titulo_header{
+        margin-left: 30px;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    .ventas{
+        display: none;
+    }
+
+    .titulo_header{
+        margin-top: 15px;
+        font-size: 40px;
+    }
+}
+
+

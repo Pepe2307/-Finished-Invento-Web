@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 /*Fuente de Google Fonts Importada a CSS*/
-
 html{
     scroll-behavior: smooth;  /*scroll de vinculos suavizado*/
 }
-
 body{
     display: flex;
     flex-direction: column;
@@ -12,7 +10,6 @@ body{
 
     align-items: center;
     justify-content: space-between;
-    /* ^^^ Esto antes no estaba*/
 
     margin: 0;
     padding: 20;
@@ -22,7 +19,6 @@ body{
     background-position: center;
     font-family: 'Lobster', cursive;
 }
-
 body::-webkit-scrollbar{
     width: 10px;
     background:rgba( 23, 42, 90);
@@ -31,9 +27,6 @@ body::-webkit-scrollbar-thumb{
     background:rgba(75, 97, 223, 0.801);
     border-radius:10pt;
 }
-
-
-
 
 /**************************************    HEADER/CABECERA    *********************/
 .header{
@@ -51,7 +44,6 @@ body::-webkit-scrollbar-thumb{
     animation: fadeInUp;
     animation-duration: 2s; 
 }
-
 .titulo_header{
     position: absolute;
     display: inline-block;
@@ -88,13 +80,11 @@ body::-webkit-scrollbar-thumb{
     
     background: rgb(39, 70, 180);
     margin-bottom: 10px;
-    
     border-radius: 20px;
 }
 .titulo_header ul li a{
     text-decoration: none;
     color: white;
-    
 }
 .titulo_header ul li:hover{
     background: rgba( 23, 42, 110);
@@ -104,8 +94,6 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(34, 59, 151);
     -webkit-text-fill-color:white;
 }
-
-
 .menu_header{
     float:right;
     padding: 0;
@@ -133,7 +121,6 @@ body::-webkit-scrollbar-thumb{
 .menu_header li a:hover{
     background: rgba( 23, 42, 110);
 }
-
             /* SUBMENUS */
 
 .menu_header > li{
@@ -144,7 +131,6 @@ body::-webkit-scrollbar-thumb{
     top: 65px;
     display: none;
 
-    
     min-width: 140px;
     padding:10px 20px;
     
@@ -168,7 +154,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
 /**************************************    TITULO    *********************/
 .titulo{
     width: 100%;
@@ -180,7 +165,6 @@ body::-webkit-scrollbar-thumb{
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
     
-
     font-family: 'Lobster', cursive; 
     font-size: 75px;
     mask-border-width: 20px;
@@ -215,21 +199,17 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
 /**************************************    FOTOS HOOVER    *********************/
 .grupo_fotos{
     margin-top: 80px;
     margin-bottom: 80px;
     border-radius: 60px;
-    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     
     justify-items: center;
     align-items: center;
 }
-
 
 /**************************************    FOTO DAMIAN    *********************/
 .presentacion_Damian{
@@ -251,6 +231,7 @@ body::-webkit-scrollbar-thumb{
 .presentacion_Damian figure img{
     transition: all 700ms ease-out;
     height: 640px;
+    max-height:100%; max-width:100%; 
 }
 .presentacion_Damian figure:hover > img{
     transform: scale(1.1);
@@ -307,7 +288,6 @@ body::-webkit-scrollbar-thumb{
     font-size: 40px;
     color:white;
     margin-top: 30px;
-
 }
 .presentacion_invento figure{
     float: left;
@@ -320,6 +300,7 @@ body::-webkit-scrollbar-thumb{
 }
 .presentacion_invento figure img{
     transition: all 700ms ease-out;
+    max-height:100%; max-width:100%; 
 }
 .presentacion_invento figure:hover > img{
     transform: scale(1.1);
@@ -370,8 +351,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
 /**************************************    FOTO PABLO    *********************/
 .presentacion_Pablo{
     margin:auto;
@@ -392,6 +371,7 @@ body::-webkit-scrollbar-thumb{
 .presentacion_Pablo figure img{
     transition: all 700ms ease-out;
     height: 640px;
+    max-height:100%; max-width:100%; 
 }
 .presentacion_Pablo figure:hover > img{
     transform: scale(1.1);
@@ -442,9 +422,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
-
 /**************************************    FOTO NICO    *********************/
 .presentacion_Nico{
     margin:auto;
@@ -464,6 +441,7 @@ body::-webkit-scrollbar-thumb{
 }
 .presentacion_Nico figure img{
     transition: all 700ms ease-out;
+    max-height:100%; max-width:100%; 
 }
 .presentacion_Nico figure:hover > img{
     transform: scale(1.1);
@@ -514,7 +492,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
 /**************************************    FOTO LOLA    *********************/
 .presentacion_Lola{
     margin:auto;
@@ -534,6 +511,7 @@ body::-webkit-scrollbar-thumb{
 }
 .presentacion_Lola figure img{
     transition: all 700ms ease-out;
+    max-height:100%; max-width:100%; 
 }
 .presentacion_Lola figure:hover > img{
     transform: scale(1.1);
@@ -603,6 +581,7 @@ body::-webkit-scrollbar-thumb{
 }
 .presentacion_joaquin figure img{
     transition: all 700ms ease-out;
+    max-height:100%; max-width:100%; 
 }
 .presentacion_joaquin figure:hover > img{
     transform: scale(1.1);
@@ -653,16 +632,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /**************************************    Boton de inicio    *********************/
 .boton_top{
     position: fixed;
@@ -711,15 +680,11 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
-
 /**************************************    FOOTER   *********************/
 .footer{
     flex: 1;
 
     display: flex;
-    
     flex-flow: row, wrap;
     justify-content: space-around;
     align-items:center;
@@ -727,7 +692,7 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     height: 400px;
 
-    font-size: 20px;
+    font-size: 25px;
     color:white;
 
     border-top: 6px solid;
@@ -737,8 +702,6 @@ body::-webkit-scrollbar-thumb{
     background-image: url(../Recursos/fondo.jpg);
     background-attachment: fixed;
 }
-
-
 .footer .footer_contacto{
     margin-left: auto;
     text-align: center;
@@ -747,7 +710,6 @@ body::-webkit-scrollbar-thumb{
     padding-left: 10px;
     padding-right: 10px;
 }
-
 .footer .iconos_redes{
     margin-left: auto;
 
@@ -760,13 +722,11 @@ body::-webkit-scrollbar-thumb{
     border-radius: 15%;
     border-radius: 10px solid transparent;
 }
-
 .footer .iconos_redes ul{
     
     font-size: 40px;
     margin: 0;
     padding: 0;
-
 }
 .footer .iconos_redes li{
     display: inline-block;
@@ -774,17 +734,14 @@ body::-webkit-scrollbar-thumb{
     text-align: left;
     font-size: 70px;
 }
-
 .footer .iconos_redes li a{
     width: 50px;
     height: 50px;
     color: white;
 }
-
 .footer .mapa{
     margin-left: auto;
 }
-
 
 
 /**************************************    RESPONSIVE MOBILE   *********************/
@@ -822,8 +779,6 @@ body::-webkit-scrollbar-thumb{
     .icon_mobile_menu{
         font-size: 40px;
     }
-
-
 
     /* Footer */
     .footer{
@@ -864,43 +819,268 @@ body::-webkit-scrollbar-thumb{
     .titulo_header{
         margin-left: 10%;
     }
-
+    /*Damian*/
     .presentacion_Damian figure{
-        height: 640px;
+        height: 550px;
         width: 500px;
     }
+    .presentacion_Damian figure .capa{
+        height: 550px;
+        width: 500px;
+    }
+    /*Invento*/
     .presentacion_invento figure{
-        height: 640px;
+        height: 550px;
         width: 500px;
     }
+    .presentacion_invento figure .capa{
+        height: 550px;
+        width: 500px;
+    }
+    /*Pablo*/
     .presentacion_Pablo figure{
-        height: 640px;
+        height: 550px;
         width: 500px;
     }
+    .presentacion_Pablo figure .capa{
+        height: 550px;
+        width: 500px;
+    }
+    /*Nico*/
     .presentacion_Nico figure{
-        height: 640px;
+        height: 530px;
         width: 500px;
     }
+    .presentacion_Nico figure .capa{
+        height: 550px;
+        width: 500px;
+    }
+    /*Lola*/
     .presentacion_Lola figure{
-        height: 640px;
+        height: 530px;
         width: 500px;
     }
+    .presentacion_Lola figure .capa{
+        height: 550px;
+        width: 500px;
+    }
+    /*Joaquin*/
     .presentacion_joaquin figure{
-        height: 640px;
+        height: 550px;
+        width: 500px;
+    }
+    .presentacion_joaquin figure .capa{
+        height: 550px;
         width: 500px;
     }
 }
-@media screen and (max-width: 495px){
+@media screen and (max-width: 600px){
+    /*Damian*/
+    .presentacion_Damian figure{
+        height: 550px;
+        width: 400px;
+    }
+    .presentacion_Damian figure .capa{
+        height: 550px;
+        width: 400px;
+    }
+    /*Invento*/
+    .presentacion_invento figure{
+        height: 550px;
+        width: 400px;
+    }
+    .presentacion_invento figure .capa{
+        height: 450px;
+        width: 400px;
+        border-radius: 200px;
+    }
+    /*Pablo*/
+    .presentacion_Pablo figure{
+        height: 550px;
+        width: 400px;
+    }
+    .presentacion_Pablo figure .capa{
+        height: 550px;
+        width: 400px;
+    }
+    /*Nico*/
+    .presentacion_Nico figure{
+        height: 430px;
+        width: 400px;
+    }
+    .presentacion_Nico figure .capa{
+        height: 450px;
+        width: 400px;
+    }
+    /*Lola*/
+    .presentacion_Lola figure{
+        height: 430px;
+        width: 400px;
+    }
+    .presentacion_Lola figure .capa{
+        height: 450px;
+        width: 400px;
+    }
+    /*Joaquin*/
+    .presentacion_joaquin figure{
+        height: 450px;
+        width: 400px;
+    }
+    .presentacion_joaquin figure .capa{
+        height: 450px;
+        width: 400px;
+    } 
+}
+
+@media screen and (max-width: 405px){
+    /*Damian*/
+    .presentacion_Damian figure{
+        height: 300px;
+        width: 300px;
+    }
+    .presentacion_Damian figure .capa{
+        display: none;
+    }
+    /*Invento*/
+    .presentacion_invento figure{
+        height: 300px;
+        width: 300px;
+    }
+    .presentacion_invento figure .capa{
+        display: none;
+    }
+    /*Pablo*/
+    .presentacion_Pablo figure{
+        height: 300px;
+        width: 300px;
+    }
+    .presentacion_Pablo figure .capa{
+        display: none;
+    }
+    /*Nico*/
+    .presentacion_Nico figure{
+        height: 300px;
+        width: 300px;
+    }
+    .presentacion_Nico figure img{
+        height: 300px;
+        width: 300px;
+    }
+    .presentacion_Nico figure .capa{
+        display: none;
+    }
+    /*Lola*/
+    .presentacion_Lola figure{
+        height: 300px;
+        width: 300px;
+    }
+    .presentacion_Lola figure img{
+        height: 300px;
+        width: 300px;
+    }
+    .presentacion_Lola figure .capa{
+        display: none;
+    }
+    /*Joaquin*/
+    .presentacion_joaquin figure{
+        height: 300px;
+        width: 300px;
+    }
+    .presentacion_joaquin figure img{
+        height: 300px;
+        width: 300px;
+    }
+    .presentacion_joaquin figure .capa{
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 305px){
+    /*Damian*/
+    .presentacion_Damian figure{
+        height: 200px;
+        width: 200px;
+    }
+    .presentacion_Damian figure .capa{
+        display: none;
+    }
+    /*Invento*/
+    .presentacion_invento figure{
+        height: 200px;
+        width: 200px;
+    }
+    .presentacion_invento figure .capa{
+        display: none;
+    }
+    /*Pablo*/
+    .presentacion_Pablo figure{
+        height: 200px;
+        width: 200px;
+    }
+    .presentacion_Pablo figure .capa{
+        display: none;
+    }
+    /*Nico*/
+    .presentacion_Nico figure{
+        height: 200px;
+        width: 200px;
+    }
+    .presentacion_Nico figure img{
+        height: 200px;
+        width: 200px;
+    }
+    .presentacion_Nico figure .capa{
+        display: none;
+    }
+    /*Lola*/
+    .presentacion_Lola figure{
+        height: 200px;
+        width: 200px;
+    }
+    .presentacion_Lola figure img{
+        height: 200px;
+        width: 200px;
+    }
+    .presentacion_Lola figure .capa{
+        display: none;
+    }
+    /*Joaquin*/
+    .presentacion_joaquin figure{
+        height: 200px;
+        width: 200px;
+    }
+    .presentacion_joaquin figure img{
+        height: 200px;
+        width: 200px;
+    }
+    .presentacion_joaquin figure .capa{
+        display: none;
+    }
+
     .titulo_header{
-        margin-left: 0%;
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 50px;
     }
 }
 
 
+@media screen and (max-width: 600px){
+    .header{
+        width: 100%;
+    }
+    .titulo_header{
+        margin-left: 15%;
+    }
+}
+@media screen and (max-width: 450px){
+    .titulo_header{
+        margin-left: 0;
+    }
+}
 
 
 /*GALERIA*/
-
 @media screen and (max-width: 1700px){
     .grupo_fotos{
         background: none;

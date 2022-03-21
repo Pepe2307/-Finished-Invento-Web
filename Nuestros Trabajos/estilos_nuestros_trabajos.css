@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 /*Fuente de Google Fonts Importada a CSS*/
-
 html{
     scroll-behavior: smooth;  /*scroll de vinculos suavizado*/
 }
-
 body{ /*CAMBIADO */
     display: flex;
     flex-direction: column;
@@ -19,10 +17,7 @@ body{ /*CAMBIADO */
     background-size: cover;
     background-position: center;
     font-family: 'Lobster', cursive;
- 
-
 }
-
 body::-webkit-scrollbar{
     width: 10px;
     background:rgba( 23, 42, 90);
@@ -32,8 +27,6 @@ body::-webkit-scrollbar-thumb{
     border-radius:10pt;
   
 }
-
-
 
 
 /**************************************    HEADER/CABECERA    *********************/
@@ -52,7 +45,6 @@ body::-webkit-scrollbar-thumb{
     animation: fadeInUp;
     animation-duration: 2s; 
 }
-
 .titulo_header{
     position: absolute;
     display: inline-block;
@@ -95,7 +87,6 @@ body::-webkit-scrollbar-thumb{
 .titulo_header ul li a{
     text-decoration: none;
     color: white;
-    
 }
 .titulo_header ul li:hover{
     background: rgba( 23, 42, 110);
@@ -105,8 +96,6 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(34, 59, 151);
     -webkit-text-fill-color:white;
 }
-
-
 .menu_header{
     float:right;
     padding: 0;
@@ -144,7 +133,6 @@ body::-webkit-scrollbar-thumb{
     position: absolute;
     top: 65px;
     display: none;
-
     
     min-width: 140px;
     padding:10px 20px;
@@ -180,11 +168,9 @@ body::-webkit-scrollbar-thumb{
     background-clip:text;
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
-    background-attachment: fixed;
-    /* background-size: cover;  utilizar cuando consiga una mejor imagen de fondo */
-    
+    background-attachment: fixed;    
 
-    font-family: 'Lobster', cursive; /* Fuente Importada */
+    font-family: 'Lobster', cursive;
     font-size: 50px;
     mask-border-width: 20px;
     border-radius: 20px;
@@ -202,7 +188,6 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    LINEAS HORIZONTALES    *********************/
 .linea_custom{  
-
     width: 62% !important;
     height: 10px!important;
 
@@ -217,12 +202,9 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
 /**************************************    SLIDER    *********************/
 .slider{
     flex: 1;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -232,9 +214,7 @@ body::-webkit-scrollbar-thumb{
     
     margin: 0;
     padding: 0;
-    
     background-color:beige;
-
     border: red solid 6px;
 }
 
@@ -242,18 +222,13 @@ body::-webkit-scrollbar-thumb{
     border: green solid 6px;
     background-color: brown;
    
-    
     width: 50%;                   
     height: 10%;
     padding: 0;
     margin: 0;
     list-style: none;
-
 }
-
 .imagenes_slider li{
-    
-    
     border: 6px solid blue;
     opacity: 0;
     width: 100%;
@@ -264,18 +239,14 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     
 }
-
 .imagenes_slider li img{
-    
     width: 600px;
     height:600px;
     object-fit: cover;
 }
-
 .imagenes_slider li:first-child{
     opacity: 0;
 }
-
 .imagenes_slider li:target{
     opacity: 1;
 }
@@ -305,8 +276,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
 /**************************************    GALERIA    *********************/
 .galeria{
     flex: 1;    
@@ -325,7 +294,6 @@ body::-webkit-scrollbar-thumb{
     justify-items: center;
     align-items: center;
 }
-
 .galeria_imagenes img{
     position: relative;
 
@@ -337,13 +305,10 @@ body::-webkit-scrollbar-thumb{
     height: 580px;
     transition: 800ms;
 }
-
 .galeria_imagenes img:hover{
     transform: scale(1.1);
     z-index: 100;
 }
-
-
 
 
 /**************************************    ACORDEON    *********************/
@@ -354,7 +319,6 @@ body::-webkit-scrollbar-thumb{
 
     margin-top: 1%;
 }
-
 .accordion{
     border-radius: 50px;
     border:rgb(34, 59, 151) 20px solid;
@@ -374,21 +338,16 @@ body::-webkit-scrollbar-thumb{
     font-size: 40px;
 }
 
-
-
-
-
                         /*ACORDEON DE BT*/
 .accordion-button:not(.collapsed)::after {
     background-image: url("/Recursos/inventoIcon.png");
-  }
+}
   .accordion-button::after {
     background-image: url("/Recursos/inventoIcon.png");
-  }
-
-
-
-
+}
+.accordion-body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 /**************************************    Boton de inicio    *********************/
 .boton_top{
@@ -397,7 +356,6 @@ body::-webkit-scrollbar-thumb{
     bottom: 8vh;
     right: 0;
  
-
     transform: translate(-20px,-20px);
 
     width: 55px;
@@ -423,18 +381,14 @@ body::-webkit-scrollbar-thumb{
 .boton_whatsapp{
     position: fixed;
 
-    
     bottom: 0;
     right: 0;
-
 
     transform: translate(-20px,-20px);
     
     width: 55px;
     height: 55px;
     line-height: 55px;
-    
-
 
     border-radius: 50px;
     background: green;
@@ -451,13 +405,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
-
-
-
-
-
 /**************************************    FOOTER   *********************/
 .footer{
     flex: 1;
@@ -471,7 +418,7 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     height: 400px;
 
-    font-size: 20px;
+    font-size: 25px;
     color:white;
 
     border-top: 6px solid;
@@ -481,10 +428,7 @@ body::-webkit-scrollbar-thumb{
     background-image: url(../Recursos/fondo.jpg);
     background-attachment: fixed;
 }
-
-
 .footer .footer_contacto{
-    
     margin-left: auto;
     text-align: center;
     background-color: rgba(5,7,12, 0.50);
@@ -492,10 +436,7 @@ body::-webkit-scrollbar-thumb{
     padding-left: 10px;
     padding-right: 10px;
 }
-
 .footer .iconos_redes{
-
-    
     margin-left: auto;
 
     padding-right: 50px;
@@ -507,13 +448,10 @@ body::-webkit-scrollbar-thumb{
     border-radius: 15%;
     border-radius: 10px solid transparent;
 }
-
 .footer .iconos_redes ul{
-    
     font-size: 40px;
     margin: 0;
     padding: 0;
-
 }
 .footer .iconos_redes li{
     display: inline-block;
@@ -521,16 +459,15 @@ body::-webkit-scrollbar-thumb{
     text-align: left;
     font-size: 70px;
 }
-
 .footer .iconos_redes li a{
     width: 50px;
     height: 50px;
     color: white;
 }
-
 .footer .mapa{
     margin-left: auto;
 }
+
 
 /**************************************    RESPONSIVE MOBILE   *********************/
 /* HEADER RESPONSIVE: */
@@ -657,9 +594,26 @@ body::-webkit-scrollbar-thumb{
         height: 400px;
     }
     
+    .galeria{
+        width: 80%;
+    }
+    .galeria_imagenes img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    .header{
+        width: 100%;
+    }
+    .titulo_header{
+        margin-left: 15%;
+    }
 }
 @media screen and (max-width: 495px){
     .titulo_header{
-        margin-left: 0%;
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 45px;
     }
 }

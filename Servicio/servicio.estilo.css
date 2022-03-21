@@ -1,28 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 /*Fuente de Google Fonts Importada a CSS*/
-
 html{
     scroll-behavior: smooth;  /*scroll de vinculos suavizado*/
 }
-
 body{
     display: flex;
     flex-direction: column;
     gap: 5vh;
-
     align-items: center;
     justify-content: space-between;
-
-
     margin: 0;
     padding: 20;
-
     background: rgba(23,42,85,255);
     background-size: cover;
     background-position: center;
     font-family: 'Lobster', cursive;
 }
-
 body::-webkit-scrollbar{
     width: 10px;
     background:rgba( 23, 42, 90);
@@ -31,8 +24,6 @@ body::-webkit-scrollbar-thumb{
     background:rgba(75, 97, 223, 0.801);
     border-radius:10pt;
 }
-
-
 
 
 /**************************************    HEADER/CABECERA    *********************/
@@ -57,7 +48,6 @@ body::-webkit-scrollbar-thumb{
     display: inline-block;
     
     margin-left: 18%;    
-    
     font-size: 60px;
    
     -webkit-background-clip: text;
@@ -77,7 +67,6 @@ body::-webkit-scrollbar-thumb{
     display: none;
     min-width: 140px;
     padding:10px 20px;
-    
 
     text-align:center;
     border-radius: 20px;
@@ -94,7 +83,6 @@ body::-webkit-scrollbar-thumb{
 .titulo_header ul li a{
     text-decoration: none;
     color: white;
-    
 }
 .titulo_header ul li:hover{
     background: rgba( 23, 42, 110);
@@ -104,8 +92,6 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(34, 59, 151);
     -webkit-text-fill-color:white;
 }
-
-
 .menu_header{
     float:right;
     padding: 0;
@@ -133,7 +119,6 @@ body::-webkit-scrollbar-thumb{
 .menu_header li a:hover{
     background: rgba( 23, 42, 110);
 }
-
             /* SUBMENUS */
 
 .menu_header > li{
@@ -144,7 +129,6 @@ body::-webkit-scrollbar-thumb{
     top: 65px;
     display: none;
 
-    
     min-width: 140px;
     padding:10px 20px;
     
@@ -179,8 +163,6 @@ body::-webkit-scrollbar-thumb{
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
-    
-    
 
     font-family: 'Lobster', cursive;
     font-size: 75px;
@@ -201,7 +183,6 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    LINEAS HORIZONTALES    *********************/
 .linea_custom{
-
     width: 62% !important;
     height: 10px!important;
 
@@ -214,23 +195,27 @@ body::-webkit-scrollbar-thumb{
     border-radius: 20px!important;
     border-color: black!important;
 }
-
 .card{
     width:300px;
-    
+    font-size: 25px;
 }
-
+.card-title{
+    font-size: 45px;
+}
+.btn{
+    font-size: 30px;
+}
 /**************************************    BANNER DE SKILLS    *********************/
 .banner{
     flex: 1;
     width: 90%;
     
-
     border: 6px solid;
     border-color: rgba( 23, 42, 110);
     border-radius: 100px;
 
-    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
     color:white;
     text-align: center;
 
@@ -238,7 +223,6 @@ body::-webkit-scrollbar-thumb{
     background-image: url(../Recursos/fondo.jpg);
     background-attachment: fixed;
 }
-
 .Skills{
     display: flex;
     flex-flow:row, wrap;
@@ -249,10 +233,8 @@ body::-webkit-scrollbar-thumb{
     margin-top: 10vh;
     margin-bottom: 10vh;
 }
-
 .Marketing{
     height: 50%;
-
 
     background-color: rgba(5,7,12, 0.50);
     border-radius: 15%;
@@ -277,7 +259,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
 /**************************************    Boton de inicio    *********************/
 .boton_top{
     position: fixed;
@@ -291,7 +272,6 @@ body::-webkit-scrollbar-thumb{
     height: 55px;
     line-height: 55px;
     
-    
     border-radius: 50px;
     background:rgb(156, 156, 156);
     color: white;
@@ -304,24 +284,19 @@ body::-webkit-scrollbar-thumb{
     text-decoration: underline;
     background: white;
     color: rgb(156, 156, 156);
-    
 }
 /**************************************    Boton de WhatsApp   *********************/
 .boton_whatsapp{
     position: fixed;
-
     
     bottom: 0;
     right: 0;
-
 
     transform: translate(-20px,-20px);
     
     width: 55px;
     height: 55px;
     line-height: 55px;
-    
-
 
     border-radius: 50px;
     background: green;
@@ -338,17 +313,9 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
-
-
-
-
-
 /**************************************    FOOTER   *********************/
 .footer{
     flex: 1;
-
     display: flex;
     
     flex-flow: row, wrap;
@@ -358,7 +325,7 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     height: 400px;
 
-    font-size: 20px;
+    font-size: 25px;
     color:white;
 
     border-top: 6px solid;
@@ -368,8 +335,6 @@ body::-webkit-scrollbar-thumb{
     background-image: url(../Recursos/fondo.jpg);
     background-attachment: fixed;
 }
-
-
 .footer .footer_contacto{
     margin-left: auto;
     text-align: center;
@@ -378,7 +343,6 @@ body::-webkit-scrollbar-thumb{
     padding-left: 10px;
     padding-right: 10px;
 }
-
 .footer .iconos_redes{
     margin-left: auto;
 
@@ -391,13 +355,10 @@ body::-webkit-scrollbar-thumb{
     border-radius: 15%;
     border-radius: 10px solid transparent;
 }
-
 .footer .iconos_redes ul{
-    
     font-size: 40px;
     margin: 0;
     padding: 0;
-
 }
 .footer .iconos_redes li{
     display: inline-block;
@@ -411,15 +372,12 @@ body::-webkit-scrollbar-thumb{
     height: 50px;
     color: white;
 }
-
 .footer .mapa{
     margin-left: auto;
 }
 
 
-
 /**************************************    RESPONSIVE MOBILE   *********************/
-
 /* HEADER RESPONSIVE: */
 
 /*Al llegar a 1420px se Re-centra el H1*/
@@ -434,8 +392,6 @@ body::-webkit-scrollbar-thumb{
     display: none;
     }
 }
-
-
 /*Al llegar a 992px se Genera la version MOBILE*/
 @media screen and (max-width: 992px){
 
@@ -455,16 +411,17 @@ body::-webkit-scrollbar-thumb{
         font-size: 40px;
     }
 
-
-
-
     /* BANNER DE SKILLS*/
+    .banner{
+        width: 100%;
+    }
     .Skills{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items:center;
         width: 100%;
+        font-size: 40px;
     }
     .Marketing{
         margin-top: 4vh;
@@ -478,7 +435,6 @@ body::-webkit-scrollbar-thumb{
         margin-top: 4vh;
         margin-bottom: 4vh;
     }
-
 
     /*FOOTER*/
     .footer{
@@ -513,7 +469,16 @@ body::-webkit-scrollbar-thumb{
     .whatsapp{
         display: none;
     }
-
+    
+    .card-title{
+        font-size: 40px;
+    }
+    .card{
+        font-size: 30px;
+    }
+    .btn{
+        font-size: 30px;
+    }
 }
 
 /*Re-Centrar el H1 en menores resoluciones*/
@@ -522,8 +487,19 @@ body::-webkit-scrollbar-thumb{
         margin-left: 10%;
     }
 }
-@media screen and (max-width: 495px){
+
+@media screen and (max-width: 600px){
+    .header{
+        width: 100%;
+    }
     .titulo_header{
-        margin-left: 0%;
+        margin-left: 15%;
+    }
+}
+@media screen and (max-width: 450px){
+    .titulo_header{
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 50px;
     }
 }

@@ -13,7 +13,6 @@ body{
     align-items: center;
     justify-content: space-between;
     
-
     margin: 0;
     padding: 20;
 
@@ -31,8 +30,6 @@ body::-webkit-scrollbar-thumb{
     background:rgba(75, 97, 223, 0.801);
     border-radius:10pt;
 }
-
-
 
 
 /**************************************    HEADER/CABECERA    *********************/
@@ -77,7 +74,6 @@ body::-webkit-scrollbar-thumb{
     display: none;
     min-width: 140px;
     padding:10px 20px;
-    
 
     text-align:center;
     border-radius: 20px;
@@ -94,7 +90,6 @@ body::-webkit-scrollbar-thumb{
 .titulo_header ul li a{
     text-decoration: none;
     color: white;
-    
 }
 .titulo_header ul li:hover{
     background: rgba( 23, 42, 110);
@@ -144,7 +139,6 @@ body::-webkit-scrollbar-thumb{
     top: 65px;
     display: none;
 
-    
     min-width: 140px;
     padding:10px 20px;
     
@@ -179,8 +173,6 @@ body::-webkit-scrollbar-thumb{
     -webkit-text-fill-color: transparent;
     background-image: url(../Recursos/FondoTitulo.jpg);
     background-attachment: fixed;
-    
-    
 
     font-family: 'Lobster', cursive; /* Fuente Importada */
     font-size: 75px;
@@ -200,7 +192,6 @@ body::-webkit-scrollbar-thumb{
 
 /**************************************    LINEAS HORIZONTALES    *********************/
 .linea_custom{
-
     width: 62% !important;
     height: 10px!important;
 
@@ -213,8 +204,6 @@ body::-webkit-scrollbar-thumb{
     border-radius: 20px!important;
     border-color: black!important;
 }
-
-
 
 
 /**************************************    FOTO HOOVER    *********************/
@@ -301,19 +290,17 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
 /**************************************    BANNER DE SKILLS    *********************/
 .banner{
     flex: 1;
-    /*position:relative;*/
     width: 90%;
-    
 
     border: 6px solid;
     border-color: rgba( 23, 42, 110);
     border-radius: 100px;
 
-    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
     color:white;
     text-align: center;
 
@@ -335,7 +322,6 @@ body::-webkit-scrollbar-thumb{
 
 .Marketing{
     height: 50%;
-
 
     background-color: rgba(5,7,12, 0.50);
     border-radius: 15%;
@@ -359,19 +345,12 @@ body::-webkit-scrollbar-thumb{
     border-color: transparent;
 }
 
-
-
-
-
-/*Carrousel Bootstrap (De otra forma da problemas con tamaños)*/
+/**************************************    CARROUSEL BOOTSTRAP    *********************/
 .carousel {
     flex: 1;
     width:640px;
     height:700px;
-  }
-
-
-
+}
 
 
 /**************************************    GALERIA    *********************/
@@ -391,7 +370,6 @@ body::-webkit-scrollbar-thumb{
     grid-template-columns: repeat(3,auto);
 }
 
-
 .galeria_imagenes img{
     position: relative;
 
@@ -404,12 +382,10 @@ body::-webkit-scrollbar-thumb{
     transition: 800ms;
 }
 
-
 .galeria_imagenes img:hover{
     transform: scale(1.05);
     z-index: 100;
 }
-
 
 
 /**************************************    BIOGRAFIA    *********************/
@@ -436,11 +412,6 @@ body::-webkit-scrollbar-thumb{
 
 
 /**************************************    Banner Invento Shop    *********************/
-/* .card{
-    width: 80%;
-    height: 300px;
-}
- */
 .card{
     border-radius: 20px;
     background: rgb(44, 104, 214);
@@ -448,11 +419,8 @@ body::-webkit-scrollbar-thumb{
     height: 400px;
 }
  .boton_shop {
-    /* position: relative; 
-    left: 50%;
-    transform: translateX(-50%); */
     margin:auto;
-  }
+}
 
 /**************************************    Boton de inicio    *********************/
 .boton_top{
@@ -467,7 +435,6 @@ body::-webkit-scrollbar-thumb{
     height: 55px;
     line-height: 55px;
     
-    
     border-radius: 50px;
     background:rgb(156, 156, 156);
     color: white;
@@ -480,12 +447,10 @@ body::-webkit-scrollbar-thumb{
     text-decoration: underline;
     background: white;
     color: rgb(156, 156, 156);
-    
 }
 /**************************************    Boton de WhatsApp   *********************/
 .boton_whatsapp{
     position: fixed;
-
     
     bottom: 0;
     right: 0;
@@ -495,8 +460,6 @@ body::-webkit-scrollbar-thumb{
     width: 55px;
     height: 55px;
     line-height: 55px;
-    
-
 
     border-radius: 50px;
     background: green;
@@ -513,8 +476,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
 /**************************************    FOOTER   *********************/
 .footer{
     flex: 1;
@@ -528,7 +489,7 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     height: 400px;
 
-    font-size: 20px;
+    font-size: 25px;
     color:white;
 
     border-top: 6px solid;
@@ -538,7 +499,6 @@ body::-webkit-scrollbar-thumb{
     background-image: url(../Recursos/fondo.jpg);
     background-attachment: fixed;
 }
-
 
 .footer .footer_contacto{
     margin-left: auto;
@@ -563,11 +523,9 @@ body::-webkit-scrollbar-thumb{
 }
 
 .footer .iconos_redes ul{
-    
     font-size: 40px;
     margin: 0;
     padding: 0;
-
 }
 .footer .iconos_redes li{
     display: inline-block;
@@ -587,9 +545,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
-
 /**************************************    RESPONSIVE MOBILE   *********************/
 /* HEADER RESPONSIVE: */
 
@@ -605,8 +560,6 @@ body::-webkit-scrollbar-thumb{
     display: none;
     }
 }
-
-
 /*Al llegar a 992px se Genera la version MOBILE*/
 @media screen and (max-width: 992px){
 
@@ -654,7 +607,6 @@ body::-webkit-scrollbar-thumb{
         margin-bottom: 4vh;
     }
 
-
     /*Galeria de Imagenes*/
     .galeria_imagenes{
         display: grid;
@@ -690,7 +642,6 @@ body::-webkit-scrollbar-thumb{
     .mapa{
         display: none;
     }
-
     /*Botones Wsp/Top_Page Desactivados en Mobile*/
     .Top_Button{
         display: none;
@@ -700,25 +651,19 @@ body::-webkit-scrollbar-thumb{
     }
 }
 
-
-
 /*En los 1800px la Galeria de Imagenes se pone en modo vertical por temas de espacio*/
 @media screen and (max-width: 1800px){
      .galeria_imagenes{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
-
 }
 
-
-
-/*Re-Centrar el H1 en menores resoluciones y reacomodar galeria/prsentacion*/
+/*Re-Centrar el H1 en menores resoluciones y reacomodar galeria/presentacion*/
 @media screen and (max-width: 740px){
     .titulo_header{
         margin-left: 10%;
     }
-
     .galeria_imagenes img{
         width: 400px;
         height: 400px;
@@ -730,15 +675,20 @@ body::-webkit-scrollbar-thumb{
     .texto_bio{
         float: left;
     }
-
     .presentacion figure{
         height: 500px;
-        width: 500px;        
+        width: 100%;     
     }
-}
-@media screen and (max-width: 495px){
-    .titulo_header{
-        margin-left: 0%;
+    .presentacion figure img{
+        max-height:100%; max-width:100%;
+        height: 550px;
+    }
+    .galeria{
+        width: 80%;
+    }
+    .galeria_imagenes img{
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -750,11 +700,28 @@ body::-webkit-scrollbar-thumb{
       max-width: 100%;
     }
     .card{
-        height: 500px;
+        height: 600px;
     }
-  }
+}
+
+@media screen and (max-width: 600px){
+    .header{
+        width: 100%;
+    }
+    .titulo_header{
+        margin-left: 15%;
+    }
+}
+@media screen and (max-width: 450px){
+    .titulo_header{
+        margin-left: 0;
+    }
+    .card{
+        height: 800px;
+    }
 
 
+}
 /*Ajustar Foto Hover Inicial */
 @media screen and (max-width: 1400px){
     .presentacion figure{
@@ -774,5 +741,38 @@ body::-webkit-scrollbar-thumb{
     }
     .presentacion figure .capa p{
         display: none;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .biografia{
+        display: none;
+    }    
+}
+@media screen and (max-width: 495px){
+    .titulo_header{
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 280px){
+    .titulo_header{
+        margin-top: 15px;
+        font-size: 40px;
+    }
+
+    #boton_tienda{
+    width:100%;    
+    }
+}
+@media screen and (max-width: 255px){
+    .card{
+        height: 900px;
+    }
+}
+@media screen and (max-width: 240px){
+    .card{
+        height: 1100px;
     }
 }
